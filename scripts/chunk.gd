@@ -4,7 +4,7 @@ var WHIRLPOOL = preload("res://scenes/whirlpool.tscn")
 var SHARK = preload("res://scenes/shark.tscn")
 
 func _ready() -> void:
-	spawn(5, "whirlpool")
+	spawn(1, "whirlpool")
 	spawn(3, "shark")
 func _process(_delta: float) -> void:
 	pass
