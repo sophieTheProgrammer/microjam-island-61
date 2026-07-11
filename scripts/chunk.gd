@@ -12,8 +12,8 @@ func spawn(num):
 	for i in range(num):
 		var new_whirlpool = whirlpool_scene.instantiate()
 		
-		new_whirlpool.position.x = randf_range(Global.viewport.x / 2, -Global.viewport.x / 2)
-		new_whirlpool.position.y = randf_range(Global.viewport.y / 2, -Global.viewport.y / 2)
+		new_whirlpool.position.x = randf_range(Global.viewport.x / 2, -Global.viewport.x / 2) + self.position.x
+		new_whirlpool.position.y = randf_range(Global.viewport.y / 2, -Global.viewport.y / 2) + self.position.y
 		obstacles.add_child(new_whirlpool)
 
 
