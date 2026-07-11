@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 700.0
-const y_multiplier = 2
+const SPEED = 800.0
+const y_multiplier = 5
 const acceleration = 20
-const buffer = 50
+const buffer = 100
 var direction = 0
 func _ready() -> void:
 	Global.player_node = self
