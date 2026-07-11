@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdb2183smwup1"]
 
 [ext_resource type="Script" uid="uid://fme05tcdw7f0" path="res://scripts/shark.gd" id="1_v5iaq"]
-[ext_resource type="Texture2D" uid="uid://2farmdu0mlyj" path="res://art/IMG_3314.png" id="2_v5iaq"]
+[ext_resource type="Texture2D" uid="uid://2farmdu0mlyj" path="res://art/shark.png" id="2_v5iaq"]
 [ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="3_po4rd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]

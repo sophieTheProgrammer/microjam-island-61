@@ -2,10 +2,11 @@ extends Node2D
 var WHIRLPOOL = preload("res://scenes/whirlpool.tscn")
 @onready var obstacles: Node = $"obstacles"
 var SHARK = preload("res://scenes/shark.tscn")
-
+var sharks_to_spawn = 3
+var whirlpools_to_spawn = 1
 func _ready() -> void:
-	spawn(1, "whirlpool")
-	spawn(3, "shark")
+	spawn(whirlpools_to_spawn, "whirlpool")
+	spawn(sharks_to_spawn, "shark")
 func _process(_delta: float) -> void:
 	pass
 	

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bcmo5iwijcqar"]
+
+[node name="log" type="Node2D" unique_id=1067179768]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=11304044]
