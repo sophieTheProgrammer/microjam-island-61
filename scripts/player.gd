@@ -22,3 +22,4 @@ func _physics_process(delta: float) -> void:
 		position.y = -Global.viewport.y/2 + buffer
 	self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
 	move_and_slide()
+	
