@@ -6,7 +6,7 @@ var chunks_spawned = 0
 func _ready() -> void:
 	EventBus.spawn_new_chunk.connect(spawn_chunk)
 	spawn_chunk()
-	spawn_chunk()
+	spawn_sharkless_chunk()
 	spawn_chunk()
 
 func _process(_delta: float) -> void:
@@ -18,4 +18,10 @@ func spawn_chunk():
 	self.add_child.call_deferred(new_chunk)
 	chunks_spawned += 1
 	
+func spawn_sharkless_chunk():
+	var new_chunk = chunk.instantiate()
+	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
+	new_chunk.sharks_to_spawn = 0
+	self.add_child.call_deferred(new_chunk)
+	chunks_spawned += 1
 	
