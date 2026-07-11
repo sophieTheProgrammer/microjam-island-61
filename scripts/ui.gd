@@ -7,5 +7,6 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	Global.score += delta
-	distance.text = "Distance Traveled: " + str(int(floor(Global.score))) + " yards"
+	if Global.game_is_running:
+		Global.score += delta
+		distance.text = "Distance Traveled: " + str(int(floor(Global.score))) + " yards"

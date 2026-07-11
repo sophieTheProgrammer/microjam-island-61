@@ -7,11 +7,6 @@
 [node name="Ui" type="CanvasLayer" unique_id=340363726]
 script = ExtResource("1_nt7q6")
 
-[node name="Fade" parent="." unique_id=383164694 instance=ExtResource("2_yev5y")]
-visible = false
-
-[node name="end screen" parent="." unique_id=101591616 instance=ExtResource("2_x4jx1")]
-
 [node name="Panel" type="Panel" parent="." unique_id=1760701443]
 offset_left = 10.0
 offset_top = 9.0
@@ -26,3 +21,8 @@ offset_bottom = 61.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Distance Traveled: "
+
+[node name="Fade" parent="." unique_id=383164694 instance=ExtResource("2_yev5y")]
+
+[node name="end screen" parent="." unique_id=101591616 instance=ExtResource("2_x4jx1")]
+z_index = 2
