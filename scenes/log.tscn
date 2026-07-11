@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://bcmo5iwijcqar"]
 
+[ext_resource type="Texture2D" uid="uid://bbsx6qlo4q10d" path="res://art/log.png" id="1_spugk"]
+
 [node name="log" type="Node2D" unique_id=1067179768]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=11304044]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_spugk")
