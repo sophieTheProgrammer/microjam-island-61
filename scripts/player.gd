@@ -26,4 +26,4 @@ func _physics_process(delta: float) -> void:
 	self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
 	move_and_slide()
 func game_over():
-	collision_shape_2d.disabled = false
+	collision_shape_2d.set_deferred("disabled", false) 

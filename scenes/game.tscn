@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ck17q1kicx35t"]
 
+[ext_resource type="Script" uid="uid://v4x6qmt7o0on" path="res://scenes/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://d13baxhqbwdm6" path="res://scenes/ui.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c4v13eib1rflh" path="res://scenes/world_container.tscn" id="2_yqjtg"]
 
 [node name="game" type="Node2D" unique_id=404250698]
+script = ExtResource("1_lnu2h")
 
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
