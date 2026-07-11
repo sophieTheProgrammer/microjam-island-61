@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c4v13eib1rflh"]
+
+[ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="1_nr1qe"]
+[ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_mlpqv"]
+[ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_rbrnk"]
+
+[node name="world_container" type="Node" unique_id=352490430]
+
+[node name="spawner" type="Node2D" parent="." unique_id=1679969869]
+script = ExtResource("1_nr1qe")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=659092437]
+limit_top = 0
+limit_bottom = 0
+position_smoothing_enabled = true
+script = ExtResource("2_mlpqv")
+
+[node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_rbrnk")]
