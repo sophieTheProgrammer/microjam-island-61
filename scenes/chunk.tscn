@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dau314vrra7i6"]
 
-[ext_resource type="Texture2D" uid="uid://dfu8o4dr2s6ub" path="res://stock/sea-1547609_1280.jpg" id="1_08ivf"]
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h2h35"]
@@ -9,11 +8,6 @@ b = Vector2(408, 331)
 
 [node name="chunk" type="Node2D" unique_id=709913294]
 script = ExtResource("1_h8q3v")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1999960836]
-position = Vector2(-2.0000076, -1.5258789e-05)
-scale = Vector2(0.8130129, 0.8130129)
-texture = ExtResource("1_08ivf")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=114175988]
 
