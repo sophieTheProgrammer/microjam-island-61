@@ -13,7 +13,7 @@ var fade_node : CanvasLayer
 
 const DEBUG_DEATH : bool = false
 
-var game_is_running: bool = false
+var game_is_running: bool = true
 
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
@@ -21,6 +21,7 @@ var score = 0
 
 func start_game(reloadWorld):
 	game_is_running = true
+	score = 0
 	Engine.time_scale = 1
 	await fade_node.fade(1, 1.5).finished
 	world_container_node.queue_free()
