@@ -21,8 +21,10 @@ func spawn_chunk():
 func spawn_obstacleless_chunk():
 	var new_chunk = chunk.instantiate()
 	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
-	new_chunk.sharks_to_spawn = 0
-	new_chunk.whirlpools_to_spawn = 0
+	var i := 0
+	while i < new_chunk.obstacle_spawn.size():
+		new_chunk.obstacle_spawn[i] = 0
+		i += 1
 	self.add_child.call_deferred(new_chunk)
 	chunks_spawned += 1
 	

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h2h35"]
-a = Vector2(415, -452)
+a = Vector2(408, -452)
 b = Vector2(408, 331)
 
 [node name="chunk" type="Node2D" unique_id=709913294]

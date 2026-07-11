@@ -1,4 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dn4leoiqtpx61"]
 
+[ext_resource type="FontFile" uid="uid://bqh65u8g6poed" path="res://other/OurAwesomeGlutenFont.ttf" id="1_w2jdw"]
+
 [resource]
+default_font = ExtResource("1_w2jdw")
 RichTextLabel/font_sizes/normal_font_size = 30
