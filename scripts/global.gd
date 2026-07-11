@@ -6,7 +6,6 @@ const SETTINGS = preload("res://scenes/settings.tscn")
 const TUTORIAL = preload("res://scenes/cutscene_tutorial.tscn")
 const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 
-var debug = 1
 @onready var viewport = get_viewport().get_visible_rect().size
 @onready var world_container_node = get_tree().current_scene.get_node("world_container")
 var player_node : CharacterBody2D
