@@ -1,10 +1,26 @@
 [gd_scene format=3 uid="uid://2h64y5eyev36"]
 
-[ext_resource type="Texture2D" uid="uid://clu521h4ecdso" path="res://stock/whirlppool; stocnk.jpg" id="1_r7u8w"]
+[ext_resource type="Texture2D" uid="uid://b7tge82eu63su" path="res://art/whirlpool/1.png" id="1_ntde3"]
+[ext_resource type="Texture2D" uid="uid://dlxwhppykt62r" path="res://art/whirlpool/2.png" id="2_u2urf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8butw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ntde3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u2urf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
 
 [node name="whirlpool" type="Node2D" unique_id=1129214498]
 
-[node name="Whirlppool;Stocnk" type="Sprite2D" parent="." unique_id=1182299338]
-position = Vector2(1, 0.9999981)
-scale = Vector2(0.075051755, 0.07505176)
-texture = ExtResource("1_r7u8w")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1771988059]
+scale = Vector2(0.079013094, 0.07901309)
+sprite_frames = SubResource("SpriteFrames_8butw")
+autoplay = "default"
+frame_progress = 0.5345303

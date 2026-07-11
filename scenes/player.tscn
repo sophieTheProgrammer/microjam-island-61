@@ -33,8 +33,9 @@ size = Vector2(77, 16)
 script = ExtResource("1_0s3u6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=407492177]
+position = Vector2(0.9999981, -9.536743e-07)
 rotation = 1.5707964
-scale = Vector2(0.15319936, 0.15319934)
+scale = Vector2(0.1308865, 0.13088648)
 sprite_frames = SubResource("SpriteFrames_h2h35")
 autoplay = "default"
 
