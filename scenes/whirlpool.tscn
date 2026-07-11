@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://2h64y5eyev36"]
+
+[ext_resource type="Texture2D" uid="uid://clu521h4ecdso" path="res://stock/whirlppool; stocnk.jpg" id="1_r7u8w"]
+
+[node name="whirlpool" type="Node2D" unique_id=1129214498]
+
+[node name="Whirlppool;Stocnk" type="Sprite2D" parent="." unique_id=1182299338]
+position = Vector2(1, 0.9999981)
+scale = Vector2(0.075051755, 0.07505176)
+texture = ExtResource("1_r7u8w")
