@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cdb2183smwup1"]
 
 [ext_resource type="Texture2D" uid="uid://c8fydd366datd" path="res://icon.svg" id="1_8l5qy"]
+[ext_resource type="Script" uid="uid://fme05tcdw7f0" path="res://scripts/shark.gd" id="1_v5iaq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
 animations = [{
@@ -14,7 +15,10 @@ animations = [{
 }]
 
 [node name="shark" type="Node2D" unique_id=1939501999]
+script = ExtResource("1_v5iaq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202323751]
 sprite_frames = SubResource("SpriteFrames_inbs7")
 autoplay = "default"
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1032145672]
