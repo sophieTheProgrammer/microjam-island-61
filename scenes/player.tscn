@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b16buaif42l4j" path="res://art/swimmer/IMG_3307.png" id="3_0jhex"]
 [ext_resource type="Texture2D" uid="uid://d2m6l5capoqsj" path="res://art/swimmer/IMG_3308.png" id="4_38am0"]
 [ext_resource type="Texture2D" uid="uid://dd2o4jjutnmt3" path="res://art/swimmer/IMG_3309.png" id="5_xfidv"]
-[ext_resource type="Texture2D" uid="uid://bq7415p0k68nq" path="res://stock/input-prompts/Keyboard:Mouse Icons/keyboard_2.svg" id="6_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://p3tc1nfrxwbn" path="res://stock/flower.png" id="6_tuyoq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
 animations = [{
@@ -62,5 +62,5 @@ initial_velocity_min = 132.82
 initial_velocity_max = 351.48
 angular_velocity_min = -406.34
 angular_velocity_max = 299.41
-scale_amount_min = 0.3
-scale_amount_max = 0.5
+scale_amount_min = 0.01
+scale_amount_max = 0.03

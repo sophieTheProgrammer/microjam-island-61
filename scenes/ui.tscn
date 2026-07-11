@@ -18,7 +18,7 @@ visible = false
 [node name="Panel" type="Panel" parent="." unique_id=1760701443]
 offset_left = 10.0
 offset_top = 9.0
-offset_right = 494.0
+offset_right = 868.0
 offset_bottom = 68.0
 
 [node name="Distance" type="RichTextLabel" parent="." unique_id=679238702]
