@@ -25,3 +25,4 @@ func _slider_value_changed(value: float, source: Range) -> void:
 func _button_pressed(source: BaseButton) -> void:
 	if source == back_button:
 		get_tree().change_scene_to_packed(load("res://scenes/start.tscn"))
+	
