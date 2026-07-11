@@ -25,3 +25,9 @@ func spawn(num, type):
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	EventBus.spawn_new_chunk.emit()
+	
+	
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()
