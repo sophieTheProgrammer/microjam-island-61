@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b7tge82eu63su" path="res://art/whirlpool/1.png" id="1_ntde3"]
 [ext_resource type="Texture2D" uid="uid://dlxwhppykt62r" path="res://art/whirlpool/2.png" id="2_u2urf"]
+[ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="3_u2urf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8butw"]
 animations = [{
@@ -17,6 +18,10 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxrhw"]
+radius = 35.0
+height = 70.0
+
 [node name="whirlpool" type="Node2D" unique_id=1129214498]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1771988059]
@@ -24,3 +29,8 @@ scale = Vector2(0.079013094, 0.07901309)
 sprite_frames = SubResource("SpriteFrames_8butw")
 autoplay = "default"
 frame_progress = 0.5345303
+
+[node name="Death" parent="." unique_id=191725155 instance=ExtResource("3_u2urf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=2139440394]
+shape = SubResource("CapsuleShape2D_kxrhw")

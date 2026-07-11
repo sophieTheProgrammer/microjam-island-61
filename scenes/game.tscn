@@ -1,22 +1,11 @@
 [gd_scene format=3 uid="uid://ck17q1kicx35t"]
 
-[ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://d13baxhqbwdm6" path="res://scenes/ui.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_lnu2h"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6s70"]
-size = Vector2(428, 449)
-
 [node name="game" type="Node2D" unique_id=404250698]
-
-[node name="Death" parent="." unique_id=191725155 instance=ExtResource("1_iywne")]
-position = Vector2(-370, -2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=1727583274]
-position = Vector2(-304, -5)
-shape = SubResource("RectangleShape2D_n6s70")
 
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
