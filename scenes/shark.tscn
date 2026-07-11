@@ -18,7 +18,7 @@ animations = [{
 script = ExtResource("1_v5iaq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202323751]
+rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_inbs7")
 autoplay = "default"
-
-[node name="MoveTimer" type="Timer" parent="." unique_id=1032145672]
+flip_v = true
