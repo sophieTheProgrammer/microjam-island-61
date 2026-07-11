@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fme05tcdw7f0" path="res://scripts/shark.gd" id="1_v5iaq"]
 [ext_resource type="Texture2D" uid="uid://2farmdu0mlyj" path="res://art/IMG_3314.png" id="2_v5iaq"]
+[ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="3_po4rd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
 animations = [{
@@ -14,7 +15,11 @@ animations = [{
 "speed": 4.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inbs7"]
+size = Vector2(404, 100.000015)
+
 [node name="shark" type="Node2D" unique_id=1939501999]
+scale = Vector2(0.72, 0.72)
 script = ExtResource("1_v5iaq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202323751]
@@ -22,3 +27,8 @@ rotation = -1.5707964
 sprite_frames = SubResource("SpriteFrames_inbs7")
 autoplay = "default"
 flip_v = true
+
+[node name="Death" parent="AnimatedSprite2D" unique_id=191725155 instance=ExtResource("3_po4rd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Death" unique_id=114000227]
+shape = SubResource("RectangleShape2D_inbs7")
