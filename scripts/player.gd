@@ -16,7 +16,8 @@ func _physics_process(_delta: float) -> void:
 	if position.y + buffer > viewport.y/2:
 		velocity.y = 0
 		position.y = viewport.y/2 - buffer
-	if position.y - buffer < -viewport.y/2:
+	elif position.y - buffer < -viewport.y/2:
 		velocity.y = 0
 		position.y = -viewport.y/2 + buffer
+	self.rotation = direction * 45
 	move_and_slide()

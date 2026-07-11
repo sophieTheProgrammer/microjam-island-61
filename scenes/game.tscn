@@ -13,7 +13,6 @@
 script = ExtResource("2_yqjtg")
 
 [node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_lnu2h")]
-rotation = 1.6179202
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=244447270]
 limit_top = 0
