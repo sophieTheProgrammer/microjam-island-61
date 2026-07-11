@@ -14,7 +14,7 @@ func _ready() -> void:
 	for i in range(5):
 		spawn()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if int(position.x) % chunk_length == 0:
 		# modulo = 0
 		print("modulo")
