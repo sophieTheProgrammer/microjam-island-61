@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b16buaif42l4j" path="res://art/swimmer/IMG_3307.png" id="3_0jhex"]
 [ext_resource type="Texture2D" uid="uid://d2m6l5capoqsj" path="res://art/swimmer/IMG_3308.png" id="4_38am0"]
 [ext_resource type="Texture2D" uid="uid://dd2o4jjutnmt3" path="res://art/swimmer/IMG_3309.png" id="5_xfidv"]
-[ext_resource type="Texture2D" uid="uid://p3tc1nfrxwbn" path="res://stock/flower.png" id="6_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://7dgjbe0d2rh" path="res://art/IMG_3325.png" id="6_tuyoq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
 animations = [{
@@ -52,15 +52,17 @@ position = Vector2(-49.26, 0)
 amount = 10
 texture = ExtResource("6_tuyoq")
 lifetime = 2.0
+speed_scale = 1.5
 randomness = 0.42
 lifetime_randomness = 0.5
 emission_shape = 3
 emission_rect_extents = Vector2(1, 50)
 direction = Vector2(-1, 0)
+spread = 150.0
 gravity = Vector2(-980, 0)
 initial_velocity_min = 132.82
 initial_velocity_max = 351.48
 angular_velocity_min = -406.34
 angular_velocity_max = 299.41
-scale_amount_min = 0.01
-scale_amount_max = 0.03
+scale_amount_min = 0.2
+scale_amount_max = 0.2
