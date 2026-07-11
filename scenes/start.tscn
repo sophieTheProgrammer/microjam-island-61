@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cjulv74qj1553"]
 
 [ext_resource type="Script" uid="uid://bpq6m57xt5yl2" path="res://scripts/start_screen.gd" id="1_jaeev"]
+[ext_resource type="Theme" uid="uid://dn4leoiqtpx61" path="res://other/default.tres" id="2_u80x2"]
 
 [node name="start" type="Node2D" unique_id=1507737572]
 script = ExtResource("1_jaeev")
@@ -15,6 +16,7 @@ offset_left = 290.0
 offset_top = 380.0
 offset_right = 462.0
 offset_bottom = 445.0
+theme = ExtResource("2_u80x2")
 text = "tutorial"
 metadata/_edit_use_anchors_ = true
 
@@ -33,12 +35,15 @@ offset_bottom = 98.0
 text = "settings"
 
 [node name="StartTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=94163453]
-offset_left = 268.0
-offset_top = 46.0
-offset_right = 903.0
-offset_bottom = 213.0
+offset_left = 328.0
+offset_top = 55.0
+offset_right = 963.0
+offset_bottom = 222.0
 text = "START SCREEN"
 
+[connection signal="button_down" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_pressed" flags=18]
+[connection signal="button_down" from="CanvasLayer/StartScreenStartButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenStartButton" to="." method="_button_pressed" flags=18]
+[connection signal="button_down" from="CanvasLayer/StartScreenSettingsButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenSettingsButton" to="." method="_button_pressed" flags=18]
