@@ -16,10 +16,6 @@ var score = 0
 
 func start_game():
 	Engine.time_scale = 1
-	#fade_node.fade(1,0)
-	get_tree().change_scene_to_packed(GAME)
-
-	#await fade_node.fade(0,1.5).finished
 	get_tree().reload_current_scene()
 	score = 0
 	
