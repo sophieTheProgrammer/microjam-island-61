@@ -10,3 +10,4 @@ func _process(delta: float) -> void:
 func spawn_chunk():
 	var new_chunk = chunk.instantiate()
 	self.add_child(new_chunk)
+	viewport.x

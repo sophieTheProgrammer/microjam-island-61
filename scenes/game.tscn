@@ -3,13 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://d13baxhqbwdm6" path="res://scenes/ui.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://vwi3polunpw0" path="res://scenes/player.tscn" id="3_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://dfu8o4dr2s6ub" path="res://stock/sea-1547609_1280.jpg" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D" unique_id=404250698]
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2052780079]
-texture = ExtResource("4_lbhrr")
 
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
