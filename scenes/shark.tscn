@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://cdb2183smwup1"]
 
-[ext_resource type="Texture2D" uid="uid://c8fydd366datd" path="res://icon.svg" id="1_8l5qy"]
 [ext_resource type="Script" uid="uid://fme05tcdw7f0" path="res://scripts/shark.gd" id="1_v5iaq"]
+[ext_resource type="Texture2D" uid="uid://2farmdu0mlyj" path="res://art/IMG_3314.png" id="2_v5iaq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_8l5qy")
+"texture": ExtResource("2_v5iaq")
 }],
 "loop": 1,
 "name": &"default",
