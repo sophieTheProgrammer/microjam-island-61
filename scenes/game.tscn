@@ -9,13 +9,15 @@
 
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
-[node name="spawner" type="Node2D" parent="." unique_id=1173440994]
+[node name="world_container" type="Node" parent="." unique_id=603165261]
+
+[node name="spawner" type="Node2D" parent="world_container" unique_id=1173440994]
 script = ExtResource("2_yqjtg")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=244447270]
+[node name="Camera2D" type="Camera2D" parent="world_container" unique_id=244447270]
 limit_top = 0
 limit_bottom = 0
 position_smoothing_enabled = true
 script = ExtResource("2_lbhrr")
 
-[node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_lnu2h")]
+[node name="player" parent="world_container" unique_id=1710529082 instance=ExtResource("3_lnu2h")]
