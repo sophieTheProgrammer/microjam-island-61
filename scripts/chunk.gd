@@ -1,21 +1,20 @@
 extends Node2D
 var whirlpool_scene = preload("res://scenes/whirlpool.tscn")
-@onready var obstacles: Node2D = $"../obstacles"
-@onready var viewport = get_viewport().get_visible_rect().size
+@onready var obstacles: Node = $"obstacles"
 
 func _ready() -> void:
-	pass
+	spawn(5)
 
 func _process(delta: float) -> void:
 	pass
 	
-func spawn():
-	var new_whirlpool = whirlpool_scene.instantiate()
-	
-	new_whirlpool.position.x = randf_range(viewport.x / 2, -viewport.x / 2)
-	new_whirlpool.position.y = randf_range(viewport.y / 2, -viewport.y / 2)
-	obstacles.add_child(new_whirlpool)
-
+func spawn(num):
+	for i in range(num):
+		var new_whirlpool = whirlpool_scene.instantiate()
+		
+		new_whirlpool.position.x = randf_range(Global.viewport.x / 2, -Global.viewport.x / 2)
+		new_whirlpool.position.y = randf_range(Global.viewport.y / 2, -Global.viewport.y / 2)
+		obstacles.add_child(new_whirlpool)
 
 
 

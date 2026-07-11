@@ -9,6 +9,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	pass
+	
 func spawn_chunk():
 	var new_chunk = chunk.instantiate()
 	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
