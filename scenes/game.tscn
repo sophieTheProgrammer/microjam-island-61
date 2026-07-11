@@ -1,15 +1,24 @@
 [gd_scene format=3 uid="uid://ck17q1kicx35t"]
 
 [ext_resource type="PackedScene" uid="uid://d13baxhqbwdm6" path="res://scenes/ui.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scenes/camera_2d.gd" id="2_lbhrr"]
 [ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://vwi3polunpw0" path="res://scenes/player.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D" unique_id=404250698]
 
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=244447270]
-
 [node name="spawner" type="Node2D" parent="." unique_id=1173440994]
 script = ExtResource("2_yqjtg")
 
 [node name="obstacles" type="Node2D" parent="." unique_id=1876004496]
+
+[node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_lnu2h")]
+position = Vector2(-424, 6)
+rotation = 1.6179202
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=244447270]
+position = Vector2(-25.96645, -423.24667)
+rotation = -1.6179202
+script = ExtResource("2_lbhrr")

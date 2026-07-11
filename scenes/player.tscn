@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://vwi3polunpw0"]
+
+[ext_resource type="Script" uid="uid://drvmoxxivf82k" path="res://player.gd" id="1_0s3u6"]
+[ext_resource type="Texture2D" uid="uid://px85q71o6ahi" path="res://art/swimmer/IMG_3306.png" id="2_2c7ny"]
+[ext_resource type="Texture2D" uid="uid://b16buaif42l4j" path="res://art/swimmer/IMG_3307.png" id="3_0jhex"]
+[ext_resource type="Texture2D" uid="uid://d2m6l5capoqsj" path="res://art/swimmer/IMG_3308.png" id="4_38am0"]
+[ext_resource type="Texture2D" uid="uid://dd2o4jjutnmt3" path="res://art/swimmer/IMG_3309.png" id="5_xfidv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2c7ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0jhex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_38am0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xfidv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2h35"]
+size = Vector2(30, 79)
+
+[node name="player" type="CharacterBody2D" unique_id=1710529082]
+script = ExtResource("1_0s3u6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=407492177]
+position = Vector2(-1.9073486e-06, -2.2888184e-05)
+scale = Vector2(0.15319936, 0.15319934)
+sprite_frames = SubResource("SpriteFrames_h2h35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1614122116]
+position = Vector2(2, -24)
+shape = SubResource("RectangleShape2D_h2h35")

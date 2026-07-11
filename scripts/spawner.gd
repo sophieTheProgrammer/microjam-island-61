@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 		# modulo = 0
 		print("modulo")
 		chunks_traveled += 1
+	
 func spawn():
 	var new_whirlpool = whirlpool_scene.instantiate()
 	
