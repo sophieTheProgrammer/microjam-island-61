@@ -12,10 +12,12 @@
 [node name="spawner" type="Node2D" parent="." unique_id=1173440994]
 script = ExtResource("2_yqjtg")
 
-[node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_lnu2h")]
-
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=244447270]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=244447270]
+position = Vector2(-619, -2)
 limit_top = 0
 limit_bottom = 0
 position_smoothing_enabled = true
 script = ExtResource("2_lbhrr")
+
+[node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_lnu2h")]
+position = Vector2(-819, -2)
