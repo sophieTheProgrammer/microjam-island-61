@@ -21,4 +21,5 @@ func start_game():
 
 	#await fade_node.fade(0,1.5).finished
 	get_tree().reload_current_scene()
+	score = 0
 	

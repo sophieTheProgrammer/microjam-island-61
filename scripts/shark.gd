@@ -13,7 +13,7 @@ func _ready() -> void:
 	anisprite.sprite_frames.set_animation_speed("default", (randi() % FRAME_COUNT - 1) + FRAME_COUNT) # fps
 	rand_x = (randi() % int(Global.viewport.x)) - Global.viewport.x
 	rand_y = (randi() % int(Global.viewport.y)) - Global.viewport.y
-	speed = (randi() % MAX_SPEED) + int(MAX_SPEED/2)
+	speed = (randi() % MAX_SPEED) + float(MAX_SPEED)/2
 	look_at(Vector2(rand_x, rand_y))
 	self.rotate(PI/2)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
