@@ -10,6 +10,8 @@ func _process(_delta: float) -> void:
 	score.text = "Your score is " + str(int(Global.score))
 	if Input.is_action_just_pressed("restart game") and not Global.game_is_running:
 		Global.start_game(true)
+	if Global.game_is_running:
+		$CanvasLayer.hide()
 
 
 func gameover():
