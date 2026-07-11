@@ -4,21 +4,25 @@
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h2h35"]
-a = Vector2(409, -435)
+a = Vector2(415, -452)
 b = Vector2(408, 331)
 
 [node name="chunk" type="Node2D" unique_id=709913294]
 script = ExtResource("1_h8q3v")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=114175988]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1490499186]
-position = Vector2(110, 38)
-shape = SubResource("SegmentShape2D_h2h35")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1999960836]
 position = Vector2(-2.0000076, -1.5258789e-05)
 scale = Vector2(0.8130129, 0.8130129)
 texture = ExtResource("1_08ivf")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=114175988]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1490499186]
+position = Vector2(110, 38)
+shape = SubResource("SegmentShape2D_h2h35")
+debug_color = Color(0.9411765, 0, 0, 0.41960785)
+
 [node name="obstacle" type="Node" parent="." unique_id=241453255]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
