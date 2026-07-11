@@ -14,6 +14,6 @@ func spawn_chunk():
 	var new_chunk = chunk.instantiate()
 	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
 	self.add_child.call_deferred(new_chunk)
-	chunks_spawned+=1
+	chunks_spawned += 1
 	
 	
