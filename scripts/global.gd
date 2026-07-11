@@ -11,3 +11,4 @@ const TUTORIAL = preload("res://scenes/cutscene_tutorial.tscn")
 
 func _process(delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
+var score = 0
