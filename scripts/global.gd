@@ -8,7 +8,17 @@ const TUTORIAL = preload("res://scenes/cutscene_tutorial.tscn")
 @onready var viewport = get_viewport().get_visible_rect().size
 #@onready var camera = get_tree().$player/Camera2D
 var player_node : CharacterBody2D
+var fade_node : CanvasLayer
 
 func _process(_delta: float) -> void:
-	pass
+	viewport = get_viewport().get_visible_rect().size
 var score = 0
+
+func start_game():
+	Engine.time_scale = 1
+	#fade_node.fade(1,0)
+	get_tree().change_scene_to_packed(GAME)
+
+	#await fade_node.fade(0,1.5).finished
+	get_tree().reload_current_scene()
+	

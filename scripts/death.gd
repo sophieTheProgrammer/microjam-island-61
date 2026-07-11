@@ -1,12 +1,6 @@
 extends Area2D
 
-func _ready():
-	EventBus.game_over.connect(death)
-
-
-func death():
-	print("die")
-
-
 func _on_body_entered(_body: Node2D) -> void:
-	death()
+	print("dying shall commence now")
+	EventBus.game_over.emit()
+	
