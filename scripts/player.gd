@@ -7,7 +7,9 @@ const acceleration = 20
 const buffer = 50
 var direction = 0
 func _ready() -> void:
+	Global.player_node = self
 	velocity.x = 0
+	
 func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("up", "down")
 	velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)

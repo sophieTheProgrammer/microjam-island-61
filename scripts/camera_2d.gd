@@ -9,4 +9,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	position.y = 0
+	
+	position.x = Global.player_node.position.x + 450
+	
+	
 	#position.x = Player.position.x
