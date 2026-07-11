@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cdb2183smwup1"]
+
+[ext_resource type="Texture2D" uid="uid://c8fydd366datd" path="res://icon.svg" id="1_8l5qy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8l5qy")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="shark" type="Node2D" unique_id=1939501999]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202323751]
+sprite_frames = SubResource("SpriteFrames_inbs7")
+autoplay = "default"
