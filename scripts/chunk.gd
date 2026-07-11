@@ -7,7 +7,7 @@ func _ready() -> void:
 	spawn(5, "whirlpool")
 	spawn(3, "shark")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	
 func spawn(num, type):
@@ -23,6 +23,5 @@ func spawn(num, type):
 
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("YAY SOMETHING HAS ENTERED")
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	EventBus.spawn_new_chunk.emit()
