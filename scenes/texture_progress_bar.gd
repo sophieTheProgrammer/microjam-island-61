@@ -1,6 +1,6 @@
 extends TextureProgressBar
 
-@export var stamina_decrease_rate_per_second = 60
+@export var stamina_decrease_rate_per_second = 0
 var is_decreasing = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +12,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if is_decreasing:
 		self.value -= stamina_decrease_rate_per_second*delta
-		print(self.value)
+
 	if value == 0:
 		EventBus.game_over.emit()
