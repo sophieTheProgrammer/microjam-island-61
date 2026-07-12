@@ -21,6 +21,11 @@ func _process(delta: float) -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_entered() -> void:
 	on_screen = true
+
+
+func _on_visible_on_screen_notifier_2d_2_screen_exited() -> void:
+	await get_tree().create_timer(2.0).timeout
+	queue_free()
 "
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8butw"]
@@ -61,4 +66,7 @@ shape = SubResource("CapsuleShape2D_kxrhw")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=689020759]
 
+[node name="VisibleOnScreenNotifier2D2" type="VisibleOnScreenNotifier2D" parent="." unique_id=1172408492]
+
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D2" to="." method="_on_visible_on_screen_notifier_2d_2_screen_exited"]
