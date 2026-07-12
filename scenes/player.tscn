@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://brcd5am2a2xlt" path="res://art/swimmer/IMG_3328.png" id="3_fjrip"]
 [ext_resource type="Texture2D" uid="uid://c280inrjurhpa" path="res://art/swimmer/IMG_3331.png" id="4_smehm"]
 [ext_resource type="Texture2D" uid="uid://b24vyekfn5mnt" path="res://art/swimmer/IMG_3333.png" id="5_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://7dgjbe0d2rh" path="res://art/bubble.png" id="6_tuyoq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qlg0r"]
+load_path = "res://.godot/imported/Screenshot 2026-07-12 at 2.41.48 PM.png-e58f4a6280a42ce685615e63f2eb88f8.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
 animations = [{
@@ -36,6 +38,26 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_0s3u6")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=337780465]
+modulate = Color(1, 1, 1, 0.282)
+position = Vector2(9, 4)
+amount = 12
+texture = SubResource("CompressedTexture2D_qlg0r")
+randomness = 0.42
+lifetime_randomness = 0.5
+emission_shape = 4
+emission_points = PackedVector2Array()
+emission_colors = PackedColorArray()
+direction = Vector2(-1, 0)
+spread = 96.25
+gravity = Vector2(-980, 0)
+initial_velocity_min = 132.82
+initial_velocity_max = 365.49
+angular_velocity_min = -406.34
+angular_velocity_max = 720.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=407492177]
 position = Vector2(5, 1.9999981)
 scale = Vector2(0.14415954, 0.13508584)
@@ -47,23 +69,3 @@ frame = 2
 position = Vector2(22, 2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_po4rd")
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=337780465]
-position = Vector2(-49.26, 0)
-amount = 10
-texture = ExtResource("6_tuyoq")
-lifetime = 2.0
-speed_scale = 1.5
-randomness = 0.42
-lifetime_randomness = 0.5
-emission_shape = 3
-emission_rect_extents = Vector2(1, 50)
-direction = Vector2(-1, 0)
-spread = 150.0
-gravity = Vector2(-980, 0)
-initial_velocity_min = 132.82
-initial_velocity_max = 351.48
-angular_velocity_min = -406.34
-angular_velocity_max = 299.41
-scale_amount_min = 0.2
-scale_amount_max = 0.2
