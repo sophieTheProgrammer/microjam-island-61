@@ -22,7 +22,7 @@ var score = 0
 func start_game(reloadWorld):
 	score = 0
 	Engine.time_scale = 1
-	await fade_node.fade(1, 1.5).finished
+	await fade_node.fade(1, .15).finished
 	game_is_running = true
 
 	world_container_node.queue_free()
@@ -30,8 +30,8 @@ func start_game(reloadWorld):
 		var world_container = WORLD_CONTAINER.instantiate()
 		world_container_node = world_container
 		get_tree().current_scene.add_child(world_container)
-		await fade_node.fade(0,1.5).finished
+		await fade_node.fade(0,.15).finished
 	else:
 		get_tree().change_scene_to_packed(GAME)
-		await fade_node.fade(0,1.5).finished
+		await fade_node.fade(0,.15).finished
 		
