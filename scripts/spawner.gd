@@ -7,6 +7,9 @@ func _ready() -> void:
 	EventBus.spawn_new_chunk.connect(spawn_chunk)
 	spawn_obstacleless_chunk()
 	spawn_obstacleless_chunk()
+	spawn_chunk()
+	spawn_chunk()
+	spawn_chunk()
 
 func _process(_delta: float) -> void:
 	pass
@@ -16,6 +19,8 @@ func spawn_chunk():
 	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
 	self.add_child.call_deferred(new_chunk)
 	chunks_spawned += 1
+	Global.chunk_val += 1
+	print(Global.chunk_val)
 	
 func spawn_obstacleless_chunk():
 	var new_chunk = chunk.instantiate()
@@ -27,4 +32,6 @@ func spawn_obstacleless_chunk():
 	self.add_child.call_deferred(new_chunk)
 	new_chunk.get_node("Waves").hide()
 	chunks_spawned += 1
+	Global.chunk_val += 1
+	print(Global.chunk_val)
 	
