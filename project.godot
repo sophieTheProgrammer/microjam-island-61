@@ -87,4 +87,4 @@ escapethelog={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.1428257, 0.4945157, 0.726729, 0.89500004)
+environment/defaults/default_clear_color=Color(0.23875552, 0.5241256, 0.7475089, 1)

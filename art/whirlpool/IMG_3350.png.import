@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7cp12rbdq2hy"
-path="res://.godot/imported/WAVES.png-414a7349c026d9c63083ee14fa5f5de1.ctex"
+uid="uid://cmymxiivrspfx"
+path="res://.godot/imported/IMG_3350.png-0b632ac8d0241e20c4239c16ce77c987.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/WAVES.png"
-dest_files=["res://.godot/imported/WAVES.png-414a7349c026d9c63083ee14fa5f5de1.ctex"]
+source_file="res://art/whirlpool/IMG_3350.png"
+dest_files=["res://.godot/imported/IMG_3350.png-0b632ac8d0241e20c4239c16ce77c987.ctex"]
 
 [params]
 

@@ -18,12 +18,16 @@ func _ready() -> void:
 		add_child(newSprite)
 	anisprite.frame = randi() % FRAME_COUNT #which frame it starts on
 	anisprite.sprite_frames.set_animation_speed("default", (randi() % FRAME_COUNT - 1) + FRAME_COUNT) # fps
-	rand_x = (randi() % int(Global.viewport.x)) - Global.viewport.x*10
-	rand_y = (randi() % int(Global.viewport.y)) - Global.viewport.y
-	speed = (randi() % MAX_SPEED) + float(MAX_SPEED)/2
-	look_at(Vector2(rand_x, rand_y))
-	self.rotate(PI/2)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position = position.move_toward(Vector2(rand_x, rand_y), speed * 100 * delta)
+	
+	var rand = Vector2((randi() % int(Global.viewport.x)) - Global.viewport.x*10, (randi() % int(Global.viewport.y)) - Global.viewport.y)
+	if rand == position:
+		rand = Vector2((randi() % int(Global.viewport.x)) - Global.viewport.x*10, (randi() % int(Global.viewport.y)) - Global.viewport.y)
+	speed = (randi() % MAX_SPEED) + float(MAX_SPEED)/2
+	look_at(rand)
+	
+	self.rotate(PI/2)
+	position = position.move_toward(rand, speed * 100 * delta)
 	speed = move_toward(float(speed), 0.0, float(.01))
