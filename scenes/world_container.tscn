@@ -17,7 +17,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 1.0
+"speed": 3.0
 }]
 
 [node name="world_container" type="Node" unique_id=352490430]
