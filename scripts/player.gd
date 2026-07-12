@@ -22,8 +22,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.stop()
 		animated_sprite_2d.frame = 3
 		Global.is_decreasing = false
+		Global.attached = false
 	else:
-		if Global.attached:
+		if Global.attached and Global.game_is_running:
 				self.position.x = log_ref.position.x
 				self.position.y = log_ref.position.y
 			#log_ref.velocity = self.velocity
@@ -42,8 +43,7 @@ func _physics_process(delta: float) -> void:
 			position.y = -Global.viewport.y/2 + buffer
 		self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
 		move_and_slide()
-func game_over():
-	collision_shape_2d.set_deferred("disabled", false) 
+
 func attach_to_log(log_ref):
 	print("attaching shall commence")
 	cpu_particles_2d.hide()
@@ -51,6 +51,7 @@ func attach_to_log(log_ref):
 	self.log_ref = log_ref
 	animated_sprite_2d.stop()
 	animated_sprite_2d.frame = 3
+	
 
 func detach_from_log():
 	EventBus.player_deattaches_to_log.emit()
