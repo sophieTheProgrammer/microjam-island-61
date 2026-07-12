@@ -28,7 +28,6 @@ offset_bottom = 604.0
 text = "quickstart"
 
 [node name="StartScreenSettingsButton" type="Button" parent="CanvasLayer" unique_id=993410638]
-visible = false
 offset_left = 876.0
 offset_top = 7.0
 offset_right = 1140.0

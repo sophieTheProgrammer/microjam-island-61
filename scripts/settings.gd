@@ -7,8 +7,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	music_slider.value = (AudioPlayer.Music_Volume_Modifier + 1) * 50
-	sfx_slider.value = (AudioPlayer.SFX_Volume_Modifier + 1) * 50
+	music_slider.value = (AudioPlayer.Music_Volume_Modifier + 10) * 5
+	sfx_slider.value = (AudioPlayer.SFX_Volume_Modifier + 10) * 5
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,9 +17,9 @@ func _process(_delta: float) -> void:
 
 func _slider_value_changed(value: float, source: Range) -> void:
 	if source == music_slider:
-		AudioPlayer.Music_Volume_Modifier = value/50 - 1
+		AudioPlayer.Music_Volume_Modifier = value/5 - 10
 	elif source == sfx_slider:
-		AudioPlayer.SFX_Volume_Modifier = value/50 - 1
+		AudioPlayer.SFX_Volume_Modifier = value/5 - 10
 	print(AudioPlayer.Music_Volume_Modifier)
 	print(AudioPlayer.SFX_Volume_Modifier)
 
