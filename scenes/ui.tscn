@@ -25,6 +25,18 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "stamina"
 
+[node name="spacetolaunch" type="RichTextLabel" parent="." unique_id=639491684]
+custom_minimum_size = Vector2(1000, 0)
+offset_left = 458.99997
+offset_top = 324.0
+offset_right = 1459.0
+offset_bottom = 369.0
+scale = Vector2(1.13, 1.13)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Press space to start!"
+fit_content = true
+
 [node name="Distance" type="RichTextLabel" parent="." unique_id=679238702]
 custom_minimum_size = Vector2(1000, 0)
 offset_left = 17.0
