@@ -91,4 +91,5 @@ expand_icon = true
 [connection signal="value_changed" from="VBoxContainer2/SFX Slider" to="." method="_slider_value_changed" flags=18]
 [connection signal="button_down" from="VBoxContainer2/Distance" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="VBoxContainer2/Distance" to="." method="_button_pressed" flags=18]
+[connection signal="button_down" from="VBoxContainer2/shark" to="." method="_button_down" flags=18]
 [connection signal="toggled" from="VBoxContainer2/shark" to="." method="_on_shark_toggled"]
