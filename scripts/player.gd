@@ -14,6 +14,7 @@ var direction = 0
 func _ready() -> void:
 	Global.player_node = self
 	EventBus.player_attaches_to_log.connect(attach_to_log)
+	EventBus.deattached_log.connect(detach_from_log)
 	velocity.x = 0
 	
 func _physics_process(delta: float) -> void:

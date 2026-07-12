@@ -10,10 +10,9 @@ const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
 var measure_unit = 1
-const DEBUG_DEATH : bool = false
+const DEBUG_DEATH : bool = true
 var high_score = 0
 var game_is_running: bool = false
-var chunk_val = 0
 var chunks_since_log = 2
 func _ready() -> void:
 	AudioPlayer.play_music(AudioPlayer.START_SCREEN_SONG, -1)
