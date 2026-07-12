@@ -14,7 +14,7 @@ func _process(_delta: float) -> void:
 	pass
 
 func _button_pressed(source: BaseButton) -> void:
-	AudioPlayer.play_sfx(AudioPlayer.CLICK_003, 0)
+	AudioPlayer.play_sfx(AudioPlayer.CLICK_003, 1)
 	match source:
 		start_screen_tutorial_button:
 			get_tree().change_scene_to_packed(Global.TUTORIAL)
@@ -25,4 +25,4 @@ func _button_pressed(source: BaseButton) -> void:
 
 
 func _button_down(_source: BaseButton) -> void:
-	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 0)
+	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)

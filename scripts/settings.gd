@@ -7,8 +7,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	music_slider.value = 100
-	sfx_slider.value = 100
+	music_slider.value = (AudioPlayer.Music_Volume_Modifier + 10) * 5
+	sfx_slider.value = (AudioPlayer.SFX_Volume_Modifier + 10) * 5
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,14 +17,14 @@ func _process(_delta: float) -> void:
 
 func _slider_value_changed(value: float, source: Range) -> void:
 	if source == music_slider:
-		AudioPlayer.Music_Volume_Modifier = value/100
+		AudioPlayer.Music_Volume_Modifier = value/5 - 10
 	elif source == sfx_slider:
-		AudioPlayer.SFX_Volume_Modifier = value/100
+		AudioPlayer.SFX_Volume_Modifier = value/5 - 10
 	print(AudioPlayer.Music_Volume_Modifier)
 	print(AudioPlayer.SFX_Volume_Modifier)
 
 func _button_pressed(source: BaseButton) -> void:
-	AudioPlayer.play_sfx(AudioPlayer.CLICK_003, 0)
+	AudioPlayer.play_sfx(AudioPlayer.CLICK_003, 1)
 	if source == back_button:
 		get_tree().change_scene_to_packed(load("res://scenes/start.tscn"))
 	elif source == distance_button:
@@ -36,4 +36,4 @@ func _button_pressed(source: BaseButton) -> void:
 			distance_button.text = "American"
 	
 func _button_down(_source: BaseButton) -> void:
-	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 0)
+	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)

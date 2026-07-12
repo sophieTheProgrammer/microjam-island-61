@@ -24,7 +24,7 @@ func start_game(reloadWorld):
 	Engine.time_scale = 1
 	await fade_node.fade(1, .15).finished
 	game_is_running = true
-
+	world_container_node = get_tree().current_scene.get_node("world_container")
 	world_container_node.queue_free()
 	if reloadWorld:
 		var world_container = WORLD_CONTAINER.instantiate()
