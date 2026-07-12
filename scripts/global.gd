@@ -19,6 +19,7 @@ var score = 0
 var attached = false
 var is_decreasing = false
 var fade = 0
+var stamina = 100
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
