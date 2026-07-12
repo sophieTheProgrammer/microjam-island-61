@@ -18,17 +18,17 @@ func gameover(source):
 	print("gameover")
 	if not Global.DEBUG_DEATH:
 		if Global.game_is_running:
+			end_title.text = "You died by " + source + ", try "
+			if source == "stamina":
+				end_title.text += "finding a log to breath next time"
+			else:
+				end_title.text += "avoiding them next time"
+			score.text = "Score: " + str(int(Global.score*Global.measure_unit))
+			score.text += "\nHigh score: " + str(Global.high_score*Global.measure_unit)
+			if int(Global.score*Global.measure_unit) > Global.high_score:
+				print("YAYAYYASY HIGH SCHORE")
+				Global.high_score = int(Global.score*Global.measure_unit)
+				score.text = "New high score!" + "\n" +str(Global.high_score*Global.measure_unit)
 			$CanvasLayer.show()
 			Global.game_is_running = false
 			await Global.fade_node.fade(0.5, 0.2).finished
-	end_title.text = "You died by " + source + ", try "
-	if source == "stamina":
-		end_title.text += "finding a log to breath next time"
-	else:
-		end_title.text += "avoiding them next time"
-	score.text = "Score: " + str(int(Global.score*Global.measure_unit))
-	score.text += "\nHigh score: " + str(Global.high_score*Global.measure_unit)
-	if int(Global.score*Global.measure_unit) > Global.high_score:
-		print("YAYAYYASY HIGH SCHORE")
-		Global.high_score = int(Global.score*Global.measure_unit)
-		score.text = "New high score!" + "\n" +str(Global.high_score*Global.measure_unit)
