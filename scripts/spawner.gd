@@ -16,8 +16,7 @@ func spawn_chunk():
 	new_chunk.position.x = (chunks_spawned * Global.viewport.x)
 	self.add_child.call_deferred(new_chunk)
 	chunks_spawned += 1
-	Global.chunk_val += 1
-	print(Global.chunk_val)
+	print("spawned chunk")
 	
 func spawn_obstacleless_chunk():
 	var new_chunk = chunk.instantiate()
@@ -29,6 +28,4 @@ func spawn_obstacleless_chunk():
 	self.add_child.call_deferred(new_chunk)
 	new_chunk.get_node("Waves").hide()
 	chunks_spawned += 1
-	Global.chunk_val += 1
-	print(Global.chunk_val)
 	
