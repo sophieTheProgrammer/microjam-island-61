@@ -24,7 +24,7 @@ texture = ExtResource("3_4lcpb")
 
 [node name="ClickToContinueLabel" type="RichTextLabel" parent="CanvasLayer" unique_id=1833160664]
 modulate = Color(1, 1, 1, 0.462)
-self_modulate = Color(0.5589535, 0.5589535, 0.5589535, 1)
+self_modulate = Color(0.6528548, 0.5346807, 0.44749445, 1)
 offset_left = 620.0
 offset_top = 571.0
 offset_right = 1130.0
@@ -34,6 +34,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="StartButton" type="Button" parent="CanvasLayer" unique_id=255640173]
 visible = false
+modulate = Color(0.6028325, 0.59817046, 0.52635545, 1)
 offset_left = 393.0
 offset_top = 319.0
 offset_right = 757.0

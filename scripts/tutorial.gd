@@ -22,6 +22,10 @@ var tutorial_data : Array = [
 		"image_path":"res://art/tutorial/2.png"
 	},
 	{
+		"text":"are we broke or is the broke broking us",
+		"image_path":"res://art/tutorial/3.png"
+	},
+	{
 		"text":"",
 		"image_path":""
 	},
