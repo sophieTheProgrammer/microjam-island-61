@@ -6,9 +6,9 @@ extends CharacterBody2D
 @onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 
 const SPEED = 900
-const y_multiplier = 8
-const acceleration = 10
-const buffer = 50
+const Y_MULT = 8
+const ACCELERATION = 10
+const BUFFER = 50
 var log_ref = null
 var direction = 0
 func _ready() -> void:
@@ -38,14 +38,14 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play("default")
 			cpu_particles_2d.show()
 			direction = Input.get_axis("up", "down")
-			velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
-			velocity.x = move_toward(velocity.x, SPEED, acceleration)
-			if position.y + buffer > Global.viewport.y/2:
+			velocity.y = move_toward(velocity.y, SPEED * direction * Y_MULT, ACCELERATION * Y_MULT)
+			velocity.x = move_toward(velocity.x, SPEED, ACCELERATION)
+			if position.y + BUFFER > Global.viewport.y/2:
 				velocity.y = 0
-				position.y = Global.viewport.y/2 - buffer
-			elif position.y - buffer < -Global.viewport.y/2:
+				position.y = Global.viewport.y/2 - BUFFER
+			elif position.y - BUFFER < -Global.viewport.y/2:
 				velocity.y = 0
-				position.y = -Global.viewport.y/2 + buffer
+				position.y = -Global.viewport.y/2 + BUFFER
 			move_and_slide()
 		self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
 
