@@ -15,10 +15,10 @@ script = ExtResource("1_nt7q6")
 [node name="end screen" parent="." unique_id=101591616 instance=ExtResource("2_x4jx1")]
 
 [node name="stamina" type="RichTextLabel" parent="." unique_id=1718341714]
-offset_left = 85.0
-offset_top = 148.0
+offset_left = 85.00001
+offset_top = 147.0
 offset_right = 723.0
-offset_bottom = 213.0
+offset_bottom = 212.0
 scale = Vector2(0.54, 0.54)
 size_flags_horizontal = 0
 size_flags_vertical = 8
