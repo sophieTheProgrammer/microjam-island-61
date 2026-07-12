@@ -2,8 +2,9 @@ extends Node2D
 
 @export var Music_Volume_Modifier := 10.0
 @export var SFX_Volume_Modifier := 10.0
-const CLICK_002 = preload("res://stock/interface-sounds/click_002.ogg")
-const CLICK_003 = preload("res://stock/interface-sounds/click_003.ogg")
+const CLICK_002 = preload("res://audio/click_002.ogg")
+const CLICK_003 = preload("res://audio/click_003.ogg")
+
 #add SFX definitions here and then play the sfx in other scripts with the functions
 #for example const CLICK = preload("res://audio/clicksound.mp3")
 const START_SCREEN_SONG = preload("res://audio/𝄞₊˚ ⊹  lovely elevator •.¸¸♬.wav")
