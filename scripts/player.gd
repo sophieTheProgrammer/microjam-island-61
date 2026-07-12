@@ -26,8 +26,8 @@ func _physics_process(delta: float) -> void:
 		Global.attached = false
 	else:
 		if Global.attached and Global.game_is_running:
-				self.position.x = log_ref.position.x
-				self.position.y = log_ref.position.y
+				self.position.x = move_toward(self.position.x, log_ref.position.x, 10)
+				self.position.y = move_toward(self.position.y, log_ref.position.y, 10)
 			#log_ref.velocity = self.velocity
 		else:
 			cpu_particles_2d.show()
