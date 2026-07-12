@@ -8,6 +8,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	score.text = "Your score is " + str(int(Global.score*Global.measure_unit))
+	if int(Global.score*Global.measure_unit) > Global.high_score:
+		score.text += "\nYou also just got a new high score!"
+		Global.high_score = int(Global.score*Global.measure_unit)
+	else:
+		score.text += "\nYou have a high score of" + str(Global.high_score)
 	if Input.is_action_just_pressed("restart game") and not Global.game_is_running:
 		Global.start_game(true)
 		$CanvasLayer.hide()
