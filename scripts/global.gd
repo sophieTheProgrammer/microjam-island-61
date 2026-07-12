@@ -17,6 +17,7 @@ var game_is_running: bool = true
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
+var attached = false
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
