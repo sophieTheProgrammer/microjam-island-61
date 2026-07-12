@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dau314vrra7i6"]
 
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
-[ext_resource type="Texture2D" uid="uid://r7mclpatanm5" path="res://art/waves.png" id="2_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/WAVES.png" id="2_jtw3q"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h2h35"]
 a = Vector2(408, -452)

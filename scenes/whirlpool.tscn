@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://2h64y5eyev36"]
 
-[ext_resource type="Texture2D" uid="uid://b7tge82eu63su" path="res://art/whirlpool/1.png" id="1_ntde3"]
-[ext_resource type="Texture2D" uid="uid://dlxwhppykt62r" path="res://art/whirlpool/2.png" id="2_u2urf"]
+[ext_resource type="Texture2D" uid="uid://cmymxiivrspfx" path="res://art/whirlpool/IMG_3350.png" id="1_u2urf"]
+[ext_resource type="Texture2D" uid="uid://ceyk5si5fmv5t" path="res://art/whirlpool/IMG_3351.png" id="2_rqyrp"]
 [ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="3_u2urf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8butw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ntde3")
+"texture": ExtResource("1_u2urf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_u2urf")
+"texture": ExtResource("2_rqyrp")
 }],
 "loop": 1,
 "name": &"default",

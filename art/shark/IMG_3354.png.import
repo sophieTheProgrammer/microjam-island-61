@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlxwhppykt62r"
-path="res://.godot/imported/2.png-065cee3f155314c4403c816044a27a3f.ctex"
+uid="uid://d01agx8dm3mjk"
+path="res://.godot/imported/IMG_3354.png-5b3f34489966798d2db05816340f68b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/whirlpool/2.png"
-dest_files=["res://.godot/imported/2.png-065cee3f155314c4403c816044a27a3f.ctex"]
+source_file="res://art/shark/IMG_3354.png"
+dest_files=["res://.godot/imported/IMG_3354.png-5b3f34489966798d2db05816340f68b2.ctex"]
 
 [params]
 
