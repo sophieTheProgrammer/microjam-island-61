@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 				animated_sprite_2d.play("log")
 			#log_ref.velocity = self.velocity
 		else:
-			animated_sprite_2d.play()
+			animated_sprite_2d.play("default")
 			cpu_particles_2d.show()
 			direction = Input.get_axis("up", "down")
 			velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
