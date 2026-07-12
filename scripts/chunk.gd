@@ -4,7 +4,7 @@ var WHIRLPOOL = preload("res://scenes/whirlpool.tscn")
 var SHARK = preload("res://scenes/shark.tscn")
 
 var LOG = preload("res://scenes/log.tscn")
-var sharks_to_spawn = randi() % 2 + 1
+var sharks_to_spawn = randi() % 2 + 10
 var whirlpools_to_spawn = 1
 var logs_to_spawn = -1
 var chunks_since_log = 2
