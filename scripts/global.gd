@@ -43,8 +43,9 @@ func start_game(reloadWorld):
 		# GAME IS RUNNING NEEDS TO STAY HERE WHEN THE GAME IS RUNNING ACTUALLY STARTS RUNNING
 		game_is_running = true
 	else:
+
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
-
+		
 		
 var dudeno = false

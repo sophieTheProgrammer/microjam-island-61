@@ -44,6 +44,6 @@ func play_music(Stream, Volume=1):
 	musicPlayer.play()
 	current_player = musicPlayer
 	await musicPlayer.finished
-
 	musicPlayer.queue_free()
+
 	

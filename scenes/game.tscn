@@ -7,7 +7,17 @@
 script/source = "extends Node2D
 
 func _ready() -> void:
-	EventBus.start_game.emit()
+		var num = randi()%2
+		var song : AudioStreamWAV
+		match num:
+			1:
+				song = AudioPlayer.GAME_SONG_1
+			0: 
+				song = AudioPlayer.GAME_SONG_2
+		AudioPlayer.play_music(song, -1)
+		print(\"song changing\")
+		EventBus.start_game.emit()
+	
 "
 
 [node name="game" type="Node2D" unique_id=404250698]
