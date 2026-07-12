@@ -1,7 +1,7 @@
 extends TextureProgressBar
 
 @export var stamina_decrease_rate_per_second = 10
-@export var stamina_increase_rate_per_second = 15
+@export var stamina_increase_rate_per_second = 45
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.value = 100
