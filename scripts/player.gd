@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.frame = 3
 		Global.is_decreasing = false
 	else:
-		if Global.attached and Global.game_is_running:
+		if Global.attached:
 				self.position.x = log_ref.position.x
 				self.position.y = log_ref.position.y
 			#log_ref.velocity = self.velocity
