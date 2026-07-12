@@ -28,22 +28,25 @@ func _physics_process(delta: float) -> void:
 		if Global.attached and Global.game_is_running:
 				self.position.x = move_toward(self.position.x, log_ref.position.x, 10)
 				self.position.y = move_toward(self.position.y, log_ref.position.y, 10)
+				if Input.is_action_just_pressed("escapethelog"):
+					detach_from_log()
+				direction = 0
 			#log_ref.velocity = self.velocity
 		else:
+			animated_sprite_2d.play()
 			cpu_particles_2d.show()
-		if Input.is_action_just_pressed("escapethelog"):
-			detach_from_log()
-		direction = Input.get_axis("up", "down")
-		velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
-		velocity.x = move_toward(velocity.x, SPEED, acceleration)
-		if position.y + buffer > Global.viewport.y/2:
-			velocity.y = 0
-			position.y = Global.viewport.y/2 - buffer
-		elif position.y - buffer < -Global.viewport.y/2:
-			velocity.y = 0
-			position.y = -Global.viewport.y/2 + buffer
+			direction = Input.get_axis("up", "down")
+			velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
+			velocity.x = move_toward(velocity.x, SPEED, acceleration)
+			if position.y + buffer > Global.viewport.y/2:
+				velocity.y = 0
+				position.y = Global.viewport.y/2 - buffer
+			elif position.y - buffer < -Global.viewport.y/2:
+				velocity.y = 0
+				position.y = -Global.viewport.y/2 + buffer
+			move_and_slide()
 		self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
-		move_and_slide()
+
 
 func attach_to_log(log_ref):
 	print("attaching shall commence")
