@@ -10,6 +10,6 @@ func _process(_delta: float) -> void:
 	position.y = 0
 	
 	position.x = Global.player_node.position.x + 450
-	
+	print(position.x)
 	
 	#position.x = Player.position.x
