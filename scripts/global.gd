@@ -13,6 +13,9 @@ var measure_unit = 1
 const DEBUG_DEATH : bool = false
 var high_score = 0
 var game_is_running: bool = false
+func _ready() -> void:
+	AudioPlayer.play_music(AudioPlayer.START_SCREEN_SONG, -1)
+
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0

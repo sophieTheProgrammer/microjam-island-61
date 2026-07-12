@@ -6,6 +6,10 @@ const CLICK_002 = preload("res://stock/interface-sounds/click_002.ogg")
 const CLICK_003 = preload("res://stock/interface-sounds/click_003.ogg")
 #add SFX definitions here and then play the sfx in other scripts with the functions
 #for example const CLICK = preload("res://audio/clicksound.mp3")
+const START_SCREEN_SONG = preload("res://audio/𝄞₊˚ ⊹  lovely elevator •.¸¸♬.wav")
+
+const GAME_SONG_1 = preload("res://audio/'miffy cafe' ｜ cute bossa type beat, cafe music.wav")
+const GAME_SONG_2 = preload("res://audio/just another day.wav")
 
 # the difference between playing music and SFX is that
 # only one song can play at a time so if you call the music 
@@ -25,7 +29,7 @@ func play_sfx(Stream, Volume):
 
 var current_player = null
 
-func play_music(Stream, Volume):
+func play_music(Stream, Volume=1):
 
 	if current_player:
 		if Stream == current_player.stream:
@@ -35,6 +39,7 @@ func play_music(Stream, Volume):
 	musicPlayer.stream = Stream
 	musicPlayer.name = "music player"
 	musicPlayer.volume_db = Volume * Music_Volume_Modifier
+	print(musicPlayer.volume_db)
 	add_child(musicPlayer)
 	musicPlayer.play()
 	current_player = musicPlayer
