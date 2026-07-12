@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://ecicsejvmyee" path="res://art/shark/IMG_3355.png" id="5_irb4t"]
 [ext_resource type="Texture2D" uid="uid://7dgjbe0d2rh" path="res://art/bubble.png" id="7_gx357"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po4rd"]
+radius = 77.77678
+height = 466.6607
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
 animations = [{
 "frames": [{
@@ -28,13 +32,20 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po4rd"]
-radius = 77.77678
-height = 466.6607
-
 [node name="shark" type="Node2D" unique_id=1939501999]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_v5iaq")
+
+[node name="Death" parent="." unique_id=191725155 instance=ExtResource("3_po4rd")]
+position = Vector2(-1.9073486e-06, -3.333336)
+rotation = 1.5707963
+scale = Vector2(0.90001154, -0.90001154)
+is_shark = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=114000227]
+position = Vector2(-59.2585, 7.407318)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_po4rd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1202323751]
 position = Vector2(-1.9073486e-06, -3.3333359)
@@ -44,14 +55,6 @@ sprite_frames = SubResource("SpriteFrames_inbs7")
 autoplay = "default"
 frame_progress = 1.0
 flip_v = true
-
-[node name="Death" parent="AnimatedSprite2D" unique_id=191725155 instance=ExtResource("3_po4rd")]
-is_shark = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Death" unique_id=114000227]
-position = Vector2(-59.2585, 7.407318)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_po4rd")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=575168277]
 modulate = Color(1, 1, 1, 0.20784314)

@@ -18,3 +18,18 @@ func _on_body_entered(_body: Node2D) -> void:
 			EventBus.game_over.emit("shark")
 			AudioPlayer.play_sfx(AudioPlayer.CHOMP, -1)
 		print("dying shall commence now")
+
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if is_whirlpool:
+		if self.get_parent().on_screen == true:
+			var tween = create_tween()
+			var area_parent = area.get_parent()
+			area.look_at(Vector2(global_position))
+			tween.set_parallel(true)
+			tween.tween_property(area_parent, "scale", Vector2(0,0),1)
+			tween.tween_property(area_parent, "position", global_position,1)
+			print("tweening")
+			AudioPlayer.play_sfx(AudioPlayer.SPLASH, -1)
+			area.queue_free()
