@@ -18,13 +18,14 @@ func _process(_delta: float) -> void:
 var score = 0
 var attached = false
 var is_decreasing = false
+var fade = 0
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
 	score = 0
 	Engine.time_scale = 1
-	game_is_running = true
 	await fade_node.fade(1, .15).finished
+	game_is_running = true
 	if reloadWorld:
 		var current_world_container = get_tree().current_scene.get_node("world_container")
 		print(current_world_container)
