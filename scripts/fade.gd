@@ -8,7 +8,7 @@ func _ready() -> void:
 	self.hide()
 	Global.fade_node = self
 func fade(alpha_target : float, duration : float = 1.5):
-	if (Global.game_is_running):
+	if Global.game_is_running:
 		self.show()
 	# alpha target most be between 0 and 1
 	var tweener = get_tree().create_tween()
