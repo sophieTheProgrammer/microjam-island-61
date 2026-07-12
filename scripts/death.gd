@@ -15,4 +15,5 @@ func _on_body_entered(_body: Node2D) -> void:
 			EventBus.game_over.emit("whirlpool")
 		if is_shark:
 			EventBus.game_over.emit("shark")
+			AudioPlayer.play_sfx(AudioPlayer.CHOMP, -1)
 		print("dying shall commence now")

@@ -10,7 +10,7 @@ const START_SCREEN_SONG = preload("res://audio/𝄞₊˚ ⊹  lovely elevator �
 
 const GAME_SONG_1 = preload("res://audio/'miffy cafe' ｜ cute bossa type beat, cafe music.wav")
 const GAME_SONG_2 = preload("res://audio/just another day.wav")
-
+const CHOMP = preload("res://audio/chomp.mp3")
 # the difference between playing music and SFX is that
 # only one song can play at a time so if you call the music 
 # it will override the other one but the sfx can play
