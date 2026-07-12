@@ -13,6 +13,7 @@ var measure_unit = 1
 const DEBUG_DEATH : bool = false
 var high_score = 0
 var game_is_running: bool = false
+var chunk_val = 0
 func _ready() -> void:
 	AudioPlayer.play_music(AudioPlayer.START_SCREEN_SONG, -1)
 
