@@ -18,7 +18,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.x += 250*delta
 	
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	EventBus.player_attaches_to_log.emit(self)
 	
 
