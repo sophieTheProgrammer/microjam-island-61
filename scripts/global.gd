@@ -35,3 +35,4 @@ func start_game(reloadWorld):
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
 		
+var dudeno = false

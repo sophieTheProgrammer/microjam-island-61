@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bgaru8iapicjo" path="res://scripts/settings.gd" id="1_5p8wc"]
 
-[node name="Settings" type="Node2D" unique_id=1830954702]
+[node name="Settings" type="Node2D" unique_id=1830954702 node_paths=PackedStringArray("sharkbtn")]
 script = ExtResource("1_5p8wc")
+sharkbtn = NodePath("VBoxContainer2/shark")
 
 [node name="BackButton" type="Button" parent="." unique_id=1614959797]
 offset_left = 1020.0
@@ -48,7 +49,7 @@ horizontal_alignment = 1
 [node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer" unique_id=1445906470]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-text = "Arachnaphobia Mode"
+text = "DUDE NOO!! Mode"
 horizontal_alignment = 1
 
 [node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer" unique_id=744949563]
@@ -100,10 +101,11 @@ theme_override_font_sizes/font_size = 30
 text = "American"
 expand_icon = true
 
-[node name="Button4" type="Button" parent="VBoxContainer2" unique_id=2117603685]
+[node name="shark" type="Button" parent="VBoxContainer2" unique_id=2117603685]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
+toggle_mode = true
 text = "Off"
 expand_icon = true
 
@@ -141,3 +143,4 @@ expand_icon = true
 [connection signal="value_changed" from="VBoxContainer2/SFX Slider" to="." method="_slider_value_changed" flags=18]
 [connection signal="button_down" from="VBoxContainer2/Distance" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="VBoxContainer2/Distance" to="." method="_button_pressed" flags=18]
+[connection signal="toggled" from="VBoxContainer2/shark" to="." method="_on_shark_toggled"]

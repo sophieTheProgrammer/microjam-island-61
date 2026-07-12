@@ -9,6 +9,13 @@ var velocity = Vector2.ZERO
 var speed = 4.0
 
 func _ready() -> void:
+	if Global.dudeno:
+		anisprite.hide()
+		var newSprite = Sprite2D.new()
+		newSprite.texture = load("res://art/dudeno.png")
+		newSprite.scale = Vector2(2, 2)
+		newSprite.rotation_degrees = 90
+		add_child(newSprite)
 	anisprite.frame = randi() % FRAME_COUNT #which frame it starts on
 	anisprite.sprite_frames.set_animation_speed("default", (randi() % FRAME_COUNT - 1) + FRAME_COUNT) # fps
 	rand_x = (randi() % int(Global.viewport.x)) - Global.viewport.x

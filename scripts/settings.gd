@@ -4,6 +4,7 @@ extends Node2D
 @onready var distance_button: Button = $VBoxContainer2/Distance
 @onready var music_slider: HSlider = $"VBoxContainer2/Music Slider"
 @onready var sfx_slider: HSlider = $"VBoxContainer2/SFX Slider"
+@export var sharkbtn: Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -37,3 +38,15 @@ func _button_pressed(source: BaseButton) -> void:
 	
 func _button_down(_source: BaseButton) -> void:
 	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)
+
+
+
+
+func _on_shark_toggled(toggled_on: bool) -> void:
+	print("toglging shark modee")
+	if toggled_on:
+		sharkbtn.text = "On"
+		Global.dudeno = true
+	else:
+		sharkbtn.text = "Off"
+		Global.dudeno = false
