@@ -1,16 +1,33 @@
 [gd_scene format=3 uid="uid://c4v13eib1rflh"]
 
 [ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="1_nr1qe"]
+[ext_resource type="Texture2D" uid="uid://t2osactwe6qf" path="res://art/IMG_3341.png" id="1_rbrnk"]
+[ext_resource type="Texture2D" uid="uid://dnntyd3u0w8yn" path="res://art/IMG_3342.png" id="2_iux3g"]
 [ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_mlpqv"]
 [ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_rbrnk"]
-[ext_resource type="Texture2D" uid="uid://jl7eect6bnte" path="res://art/beachfront.png" id="4_mlpqv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rbrnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iux3g")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="world_container" type="Node" unique_id=352490430]
 
-[node name="Beachfront" type="Sprite2D" parent="." unique_id=281945161]
+[node name="Beachfront" type="AnimatedSprite2D" parent="." unique_id=1975330883]
 position = Vector2(463.99997, 11.999994)
 scale = Vector2(0.6342593, 0.6342593)
-texture = ExtResource("4_mlpqv")
+sprite_frames = SubResource("SpriteFrames_h2h35")
+autoplay = "default"
+frame_progress = 0.42967045
 
 [node name="spawner" type="Node2D" parent="." unique_id=1679969869]
 script = ExtResource("1_nr1qe")
