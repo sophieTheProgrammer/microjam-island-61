@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6ftktc00q3hu"
+path="res://.godot/imported/'miffy cafe' ｜ cute bossa type beat, cafe music.wav-b00f3c44f306a32ea2bbb929af2d3989.sample"
+
+[deps]
+
+source_file="res://audio/'miffy cafe' ｜ cute bossa type beat, cafe music.wav"
+dest_files=["res://.godot/imported/'miffy cafe' ｜ cute bossa type beat, cafe music.wav-b00f3c44f306a32ea2bbb929af2d3989.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
