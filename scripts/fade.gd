@@ -5,10 +5,10 @@ extends CanvasLayer
 
 func _ready() -> void:
 	color_rect.modulate.a = 0
-	self.show()
+	self.hide()
 	Global.fade_node = self
-
 func fade(alpha_target : float, duration : float = 1.5):
+	self.show()
 	# alpha target most be between 0 and 1
 	var tweener = get_tree().create_tween()
 	tweener.tween_property(color_rect, "modulate:a", alpha_target, duration)

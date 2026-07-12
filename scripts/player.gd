@@ -16,25 +16,30 @@ func _ready() -> void:
 	velocity.x = 0
 	
 func _physics_process(delta: float) -> void:
-	if Global.attached:
-		if self:
+	if not Global.game_is_running:
+		animated_sprite_2d.stop()
+		animated_sprite_2d.frame = 3
+		Global.is_decreasing = false
+	else:
+		if Global.attached:
 			self.position.x = log_ref.position.x
 			self.position.y = log_ref.position.y
-		#log_ref.velocity = self.velocity
-	if Input.is_action_just_pressed("escapethelog"):
-		detach_from_log()
-	direction = Input.get_axis("up", "down")
-	velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
-	velocity.x = move_toward(velocity.x, SPEED, acceleration)
-	if position.y + buffer > Global.viewport.y/2:
-		velocity.y = 0
-		position.y = Global.viewport.y/2 - buffer
-	elif position.y - buffer < -Global.viewport.y/2:
-		velocity.y = 0
-		position.y = -Global.viewport.y/2 + buffer
-	self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
-	move_and_slide()
-
+			#log_ref.velocity = self.velocity
+		if Input.is_action_just_pressed("escapethelog"):
+			detach_from_log()
+		direction = Input.get_axis("up", "down")
+		velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
+		velocity.x = move_toward(velocity.x, SPEED, acceleration)
+		if position.y + buffer > Global.viewport.y/2:
+			velocity.y = 0
+			position.y = Global.viewport.y/2 - buffer
+		elif position.y - buffer < -Global.viewport.y/2:
+			velocity.y = 0
+			position.y = -Global.viewport.y/2 + buffer
+		self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
+		move_and_slide()
+func game_over():
+	collision_shape_2d.set_deferred("disabled", false) 
 func attach_to_log(log_ref):
 	print("attaching shall commence")
 	Global.attached = true

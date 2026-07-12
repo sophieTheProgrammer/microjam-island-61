@@ -12,11 +12,12 @@ var fade_node : CanvasLayer
 var measure_unit = 1
 const DEBUG_DEATH : bool = false
 var high_score = 0
-var game_is_running: bool = true
+var game_is_running: bool = false
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
 var attached = false
+var is_decreasing = false
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
@@ -38,5 +39,6 @@ func start_game(reloadWorld):
 	else:
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
+
 		
 var dudeno = false
