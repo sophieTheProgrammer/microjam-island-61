@@ -10,8 +10,8 @@ const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 @onready var world_container_node = get_tree().current_scene.get_node("world_container")
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
-var measure_unit = "yards"
-const DEBUG_DEATH : bool = true
+var measure_unit = 1
+const DEBUG_DEATH : bool = false
 
 var game_is_running: bool = true
 
@@ -20,10 +20,11 @@ func _process(_delta: float) -> void:
 var score = 0
 
 func start_game(reloadWorld):
-	game_is_running = true
 	score = 0
 	Engine.time_scale = 1
 	await fade_node.fade(1, 1.5).finished
+	game_is_running = true
+
 	world_container_node.queue_free()
 	if reloadWorld:
 		var world_container = WORLD_CONTAINER.instantiate()
