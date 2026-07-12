@@ -21,7 +21,7 @@ func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
 var attached = false
-var is_decreasing = false
+var is_decreasing = true
 var fade = 0
 var stamina = 100
 
@@ -41,6 +41,7 @@ func start_game(reloadWorld):
 		get_tree().current_scene.add_child(new_world_container, true)
 		new_world_container.name = "world_container"
 		await fade_node.fade(0,.15).finished
+		is_decreasing = true
 		# GAME IS RUNNING NEEDS TO STAY HERE WHEN THE GAME IS RUNNING ACTUALLY STARTS RUNNING
 		game_is_running = true
 	else:
