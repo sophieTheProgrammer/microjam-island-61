@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b3jdkt7w7260b" path="res://scenes/death.tscn" id="3_po4rd"]
 [ext_resource type="Texture2D" uid="uid://661uppgawuat" path="res://art/shark/3.png" id="4_kbhwa"]
 [ext_resource type="Texture2D" uid="uid://b2esr5mt7jxxv" path="res://art/shark/4.png" id="5_q38ne"]
-[ext_resource type="Texture2D" uid="uid://7dgjbe0d2rh" path="res://art/IMG_3325.png" id="7_gx357"]
+[ext_resource type="Texture2D" uid="uid://7dgjbe0d2rh" path="res://art/bubble.png" id="7_gx357"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_inbs7"]
 animations = [{
