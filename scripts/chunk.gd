@@ -20,6 +20,7 @@ func _ready() -> void:
 	spawn(obstacle_spawn[0], "shark")
 	spawn(obstacle_spawn[1], "whirlpool")
 	spawn(obstacle_spawn[2], "log")
+	
 func _process(_delta: float) -> void:
 	pass
 	

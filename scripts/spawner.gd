@@ -25,5 +25,6 @@ func spawn_obstacleless_chunk():
 		new_chunk.obstacle_spawn[i] = 0
 		i += 1
 	self.add_child.call_deferred(new_chunk)
+	new_chunk.get_node("Waves").hide()
 	chunks_spawned += 1
 	
