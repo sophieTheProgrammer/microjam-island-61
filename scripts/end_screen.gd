@@ -24,5 +24,5 @@ func gameover():
 	score.text += "\nHigh score: " + str(Global.high_score*Global.measure_unit)
 	if int(Global.score*Global.measure_unit) > Global.high_score:
 		print("YAYAYYASY HIGH SCHORE")
-		score.text = "New high score!" + "\n" +str(Global.high_score*Global.measure_unit)
 		Global.high_score = int(Global.score*Global.measure_unit)
+		score.text = "New high score!" + "\n" +str(Global.high_score*Global.measure_unit)
