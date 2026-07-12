@@ -25,17 +25,19 @@ func start_game(reloadWorld):
 	score = 0
 	Engine.time_scale = 1
 	await fade_node.fade(1, .15).finished
-	game_is_running = true
 	if reloadWorld:
 		var current_world_container = get_tree().current_scene.get_node("world_container")
 		print(current_world_container)
 		print(get_tree().current_scene.get_children())
 		current_world_container.queue_free()
+		# remove child removes in within the frame cause queue free waits until the end so i kept both
 		get_tree().current_scene.remove_child(current_world_container)
 		var new_world_container = WORLD_CONTAINER.instantiate()
 		get_tree().current_scene.add_child(new_world_container, true)
 		new_world_container.name = "world_container"
 		await fade_node.fade(0,.15).finished
+		# GAME IS RUNNING NEEDS TO STAY HERE WHEN THE GAME IS RUNNING ACTUALLY STARTS RUNNING
+		game_is_running = true
 	else:
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
