@@ -18,7 +18,7 @@ func _ready() -> void:
 		add_child(newSprite)
 	anisprite.frame = randi() % FRAME_COUNT #which frame it starts on
 	anisprite.sprite_frames.set_animation_speed("default", (randi() % FRAME_COUNT - 1) + FRAME_COUNT) # fps
-	rand_x = (randi() % int(Global.viewport.x)) - Global.viewport.x*3
+	rand_x = (randi() % int(Global.viewport.x)) - Global.viewport.x*10
 	rand_y = (randi() % int(Global.viewport.y)) - Global.viewport.y
 	speed = (randi() % MAX_SPEED) + float(MAX_SPEED)/2
 	look_at(Vector2(rand_x, rand_y))
