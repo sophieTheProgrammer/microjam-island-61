@@ -10,7 +10,7 @@ const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 @onready var world_container_node = get_tree().current_scene.get_node("world_container")
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
-
+var measure_unit = "yards"
 const DEBUG_DEATH : bool = false
 
 var game_is_running: bool = true

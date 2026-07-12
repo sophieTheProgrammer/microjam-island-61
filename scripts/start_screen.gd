@@ -20,7 +20,7 @@ func _button_pressed(source: BaseButton) -> void:
 			get_tree().change_scene_to_packed(Global.TUTORIAL)
 		start_screen_start_button:
 			get_tree().change_scene_to_packed(Global.GAME)
-		start_screen_start_button:
+		start_screen_settings_button:
 			get_tree().change_scene_to_packed(Global.SETTINGS)
 
 

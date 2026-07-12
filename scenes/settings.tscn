@@ -27,19 +27,19 @@ offset_bottom = 648.0
 theme_override_constants/separation = 17
 alignment = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=932180382]
+[node name="Music" type="RichTextLabel" parent="VBoxContainer" unique_id=932180382]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Music Volume"
 horizontal_alignment = 1
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer" unique_id=1751366109]
+[node name="SFX" type="RichTextLabel" parent="VBoxContainer" unique_id=1751366109]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "SFX Volume"
 horizontal_alignment = 1
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="VBoxContainer" unique_id=1907862393]
+[node name="Distance" type="RichTextLabel" parent="VBoxContainer" unique_id=1907862393]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Distance"
@@ -93,7 +93,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 value = 100.0
 
-[node name="Button3" type="Button" parent="VBoxContainer2" unique_id=1844660137]
+[node name="Distance" type="Button" parent="VBoxContainer2" unique_id=1844660137]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -135,6 +135,9 @@ theme_override_font_sizes/font_size = 30
 text = "..."
 expand_icon = true
 
-[connection signal="pressed" from="BackButton" to="." method="_button_pressed"]
+[connection signal="button_down" from="BackButton" to="." method="_button_down" flags=18]
+[connection signal="pressed" from="BackButton" to="." method="_button_pressed" flags=18]
 [connection signal="value_changed" from="VBoxContainer2/Music Slider" to="." method="_slider_value_changed" flags=18]
 [connection signal="value_changed" from="VBoxContainer2/SFX Slider" to="." method="_slider_value_changed" flags=18]
+[connection signal="button_down" from="VBoxContainer2/Distance" to="." method="_button_down" flags=18]
+[connection signal="pressed" from="VBoxContainer2/Distance" to="." method="_button_pressed" flags=18]
