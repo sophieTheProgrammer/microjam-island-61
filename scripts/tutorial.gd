@@ -12,15 +12,23 @@ const GAME = preload("res://scenes/game.tscn")
 var tutorial_data : Array = [
 	{
 		"text":"you are an avid nature photographer",
-		"image_path":"res://stock/input-prompts/Controller Icons/generic_button.svg"
+		"image_path":"res://art/tutorial/0.png"
 	},
 	{
 		"text":"too bad you are BROKE!!!",
-		"image_path":"res://stock/input-prompts/Controller Icons/generic_button_circle.svg"
+		"image_path":"res://art/tutorial/1.png"
 	},
 	{
 		"text":"are we broke or is the broke broking us",
-		"image_path":"res://stock/input-prompts/Controller Icons/generic_button_trigger_a_fill.svg"
+		"image_path":"res://art/tutorial/2.png"
+	},
+	{
+		"text":"are we broke or is the broke broking us",
+		"image_path":"res://art/tutorial/2.png"
+	},
+	{
+		"text":"",
+		"image_path":""
 	},
 ]
 func _ready() -> void:
