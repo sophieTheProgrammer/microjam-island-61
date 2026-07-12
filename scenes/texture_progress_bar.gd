@@ -9,7 +9,7 @@ func _ready() -> void:
 	EventBus.player_attaches_to_log.connect(player_attaches_to_log)
 	EventBus.player_deattaches_to_log.connect(player_deattaches_to_log)
 	EventBus.start_game.connect(resetBar)	
-func player_attaches_to_log():
+func player_attaches_to_log(log_ref):
 	is_decreasing = false
 func player_deattaches_to_log():
 	is_decreasing = true
