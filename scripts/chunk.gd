@@ -4,9 +4,9 @@ var WHIRLPOOL = preload("res://scenes/whirlpool.tscn")
 var SHARK = preload("res://scenes/shark.tscn")
 
 var LOG = preload("res://scenes/log.tscn")
-var sharks_to_spawn = randi() % 3 + 2
+var sharks_to_spawn = randi() % 2 + 1
 var whirlpools_to_spawn = 1
-var logs_to_spawn = randi() % 3
+var logs_to_spawn = randi() % 2
 var obstacle_spawn = [sharks_to_spawn, whirlpools_to_spawn, logs_to_spawn]
 func _ready() -> void:
 	spawn(obstacle_spawn[0], "shark")
