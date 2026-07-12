@@ -12,14 +12,14 @@ var log_ref = null
 var direction = 0
 func _ready() -> void:
 	Global.player_node = self
-	EventBus.game_over.connect(game_over)
 	EventBus.player_attaches_to_log.connect(attach_to_log)
 	velocity.x = 0
 	
 func _physics_process(delta: float) -> void:
 	if Global.attached:
-		self.position.x = log_ref.position.x
-		self.position.y = log_ref.position.y
+		if self:
+			self.position.x = log_ref.position.x
+			self.position.y = log_ref.position.y
 		#log_ref.velocity = self.velocity
 	if Input.is_action_just_pressed("escapethelog"):
 		detach_from_log()
@@ -34,8 +34,7 @@ func _physics_process(delta: float) -> void:
 		position.y = -Global.viewport.y/2 + buffer
 	self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
 	move_and_slide()
-func game_over():
-	collision_shape_2d.set_deferred("disabled", false) 
+
 func attach_to_log(log_ref):
 	print("attaching shall commence")
 	Global.attached = true
