@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://dau314vrra7i6"]
 
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
-[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/WAVES.png" id="2_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/waves.png" id="2_jtw3q"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_h2h35"]
-a = Vector2(408, -452)
-b = Vector2(408, 331)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p8wc"]
+size = Vector2(120, 830)
 
 [node name="chunk" type="Node2D" unique_id=709913294]
 script = ExtResource("1_h8q3v")
@@ -13,8 +12,8 @@ script = ExtResource("1_h8q3v")
 [node name="Area2D" type="Area2D" parent="." unique_id=114175988]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1490499186]
-position = Vector2(110, 38)
-shape = SubResource("SegmentShape2D_h2h35")
+position = Vector2(557, 4)
+shape = SubResource("RectangleShape2D_5p8wc")
 debug_color = Color(0.9411765, 0, 0, 0.41960785)
 
 [node name="obstacles" type="Node" parent="." unique_id=241453255]
