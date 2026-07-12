@@ -7,7 +7,6 @@
 script = ExtResource("1_jaeev")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1354601927]
-visible = false
 
 [node name="StartScreenTutorialButton" type="Button" parent="CanvasLayer" unique_id=688141163]
 anchors_preset = -1
