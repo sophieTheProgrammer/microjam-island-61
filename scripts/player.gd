@@ -5,8 +5,8 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 
-const SPEED = 500
-const y_multiplier = 5
+const SPEED = 1000
+const y_multiplier = 10
 const acceleration = 10
 const buffer = 50
 var log_ref = null

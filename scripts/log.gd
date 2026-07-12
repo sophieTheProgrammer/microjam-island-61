@@ -16,7 +16,7 @@ func _ready() -> void:
 	#self.rotate(PI/2)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x += 100*delta
+	position.x += 250*delta
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	EventBus.player_attaches_to_log.emit(self)
