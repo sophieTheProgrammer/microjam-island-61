@@ -25,14 +25,16 @@ size_flags_vertical = 2
 text = "stamina"
 
 [node name="spacetolaunch" type="RichTextLabel" parent="." unique_id=639491684]
+modulate = Color(1, 1, 1, 0.53333336)
 custom_minimum_size = Vector2(1000, 0)
-offset_left = 458.99997
-offset_top = 324.0
-offset_right = 1459.0
-offset_bottom = 369.0
+offset_left = 751.99994
+offset_top = 612.99994
+offset_right = 1752.0
+offset_bottom = 657.99994
 scale = Vector2(1.13, 1.13)
 size_flags_horizontal = 0
 size_flags_vertical = 8
+theme_override_font_sizes/normal_font_size = 30
 text = "Press space to start!"
 fit_content = true
 
