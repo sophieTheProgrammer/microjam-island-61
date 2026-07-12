@@ -23,6 +23,7 @@ func start_game(reloadWorld):
 	EventBus.start_game.emit()
 	score = 0
 	Engine.time_scale = 1
+	game_is_running = true
 	await fade_node.fade(1, .15).finished
 	if reloadWorld:
 		var current_world_container = get_tree().current_scene.get_node("world_container")
@@ -34,7 +35,6 @@ func start_game(reloadWorld):
 		get_tree().current_scene.add_child(new_world_container, true)
 		new_world_container.name = "world_container"
 		await fade_node.fade(0,.15).finished
-		game_is_running = true
 	else:
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
