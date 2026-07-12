@@ -29,8 +29,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po4rd"]
-radius = 19.444445
-height = 416.6667
+radius = 40.74022
+height = 577.7704
 
 [node name="shark" type="Node2D" unique_id=1939501999]
 scale = Vector2(0.3, 0.3)
@@ -49,6 +49,7 @@ flip_v = true
 [node name="Death" parent="AnimatedSprite2D" unique_id=191725155 instance=ExtResource("3_po4rd")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Death" unique_id=114000227]
+position = Vector2(-111.10968, -11.110962)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_po4rd")
 

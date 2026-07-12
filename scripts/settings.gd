@@ -43,6 +43,7 @@ func _button_down(_source: BaseButton) -> void:
 
 
 func _on_shark_toggled(toggled_on: bool) -> void:
+	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)
 	print("toglging shark modee")
 	if toggled_on:
 		sharkbtn.text = "On"

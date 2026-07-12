@@ -26,3 +26,4 @@ func _button_pressed(source: BaseButton) -> void:
 
 func _button_down(_source: BaseButton) -> void:
 	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)
+	_source.position.y +=10
