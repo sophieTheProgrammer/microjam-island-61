@@ -20,10 +20,11 @@ func _process(_delta: float) -> void:
 var score = 0
 
 func start_game(reloadWorld):
-	game_is_running = true
 	score = 0
 	Engine.time_scale = 1
 	await fade_node.fade(1, 1.5).finished
+	game_is_running = true
+
 	world_container_node.queue_free()
 	if reloadWorld:
 		var world_container = WORLD_CONTAINER.instantiate()
