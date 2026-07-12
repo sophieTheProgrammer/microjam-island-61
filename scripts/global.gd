@@ -14,12 +14,12 @@ var measure_unit = 1
 const DEBUG_DEATH : bool = false
 var high_score = 0
 var game_is_running: bool = true
-
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
 
 func start_game(reloadWorld):
+	EventBus.start_game.emit()
 	score = 0
 	Engine.time_scale = 1
 	await fade_node.fade(1, .15).finished

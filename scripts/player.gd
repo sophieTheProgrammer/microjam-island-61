@@ -20,8 +20,8 @@ func _physics_process(delta: float) -> void:
 	if attached:
 		self.position.x = log_ref.position.x
 		self.position.y = log_ref.position.y
-	if Input.is_anything_pressed():
-		attached = false
+	if Input.is_action_just_pressed("escapethelog"):
+		detach_from_log()
 	direction = Input.get_axis("up", "down")
 	velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
 	velocity.x = move_toward(velocity.x, SPEED, acceleration)
@@ -39,3 +39,7 @@ func attach_to_log(log_ref):
 	print("attaching shall commence")
 	attached = true
 	self.log_ref = log_ref
+
+func detach_from_log():
+	EventBus.player_deattaches_to_log.emit()
+	attached = false
