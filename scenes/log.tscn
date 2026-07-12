@@ -1,9 +1,20 @@
 [gd_scene format=3 uid="uid://bcmo5iwijcqar"]
 
+[ext_resource type="Script" uid="uid://cbeol3lt0iq5c" path="res://scripts/log.gd" id="1_pt1ea"]
 [ext_resource type="Texture2D" uid="uid://bbsx6qlo4q10d" path="res://art/log.png" id="1_spugk"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svy8d"]
+size = Vector2(270, 59.5)
+
 [node name="log" type="Node2D" unique_id=1067179768]
+script = ExtResource("1_pt1ea")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=11304044]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_spugk")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1756369609]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=710638179]
+position = Vector2(2, 0.25)
+shape = SubResource("RectangleShape2D_svy8d")
