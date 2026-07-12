@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://dn4leoiqtpx61"]
 
-[ext_resource type="StyleBox" uid="uid://c4kuvek6taibm" path="res://defaultbox.tres" id="1_l4auq"]
+[ext_resource type="StyleBox" uid="uid://c4kuvek6taibm" path="res://other/defaultbox.tres" id="1_l4auq"]
 [ext_resource type="FontFile" uid="uid://bqh65u8g6poed" path="res://other/OurAwesomeGlutenFont.ttf" id="1_w2jdw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdli0"]
@@ -9,8 +9,6 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.20784314, 0.20784314, 0.20784314, 0)
-border_width_top = 25
-border_width_bottom = 25
 border_color = Color(0.8, 0, 0.8, 0)
 corner_radius_top_left = 3
 corner_radius_top_right = 3

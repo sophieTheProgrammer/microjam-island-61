@@ -46,34 +46,10 @@ layout_mode = 2
 text = "Distance"
 horizontal_alignment = 1
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer" unique_id=1445906470]
+[node name="dude no" type="RichTextLabel" parent="VBoxContainer" unique_id=1445906470]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "DUDE NOO!! Mode"
-horizontal_alignment = 1
-
-[node name="RichTextLabel5" type="RichTextLabel" parent="VBoxContainer" unique_id=744949563]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "Hello There"
-horizontal_alignment = 1
-
-[node name="RichTextLabel6" type="RichTextLabel" parent="VBoxContainer" unique_id=297911194]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "Random Setting #6"
-horizontal_alignment = 1
-
-[node name="RichTextLabel7" type="RichTextLabel" parent="VBoxContainer" unique_id=1751046073]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "Wowie Zowie"
-horizontal_alignment = 1
-
-[node name="RichTextLabel8" type="RichTextLabel" parent="VBoxContainer" unique_id=56146395]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "I've run out of ideas"
 horizontal_alignment = 1
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=367029549]
@@ -107,34 +83,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 toggle_mode = true
 text = "Off"
-expand_icon = true
-
-[node name="Button5" type="Button" parent="VBoxContainer2" unique_id=1358085391]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Hi"
-expand_icon = true
-
-[node name="Button6" type="Button" parent="VBoxContainer2" unique_id=820388761]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Random Button #4"
-expand_icon = true
-
-[node name="Button7" type="Button" parent="VBoxContainer2" unique_id=1870958681]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "SMBW"
-expand_icon = true
-
-[node name="Button8" type="Button" parent="VBoxContainer2" unique_id=1964221358]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "..."
 expand_icon = true
 
 [connection signal="button_down" from="BackButton" to="." method="_button_down" flags=18]
