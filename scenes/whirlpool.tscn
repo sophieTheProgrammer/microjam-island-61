@@ -32,6 +32,7 @@ autoplay = "default"
 frame_progress = 0.5345303
 
 [node name="Death" parent="." unique_id=191725155 instance=ExtResource("3_u2urf")]
+is_whirlpool = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=2139440394]
 position = Vector2(2.401066e-10, 1.0000002)
