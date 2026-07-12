@@ -7,13 +7,19 @@ const SPEED = 750
 const y_multiplier = 2
 const acceleration = 15
 const buffer = 50
+var attached = false
+var log_ref = null
 var direction = 0
 func _ready() -> void:
 	Global.player_node = self
 	EventBus.game_over.connect(game_over)
+	EventBus.player_attaches_to_log.connect(game_over)
 	velocity.x = 0
 	
 func _physics_process(delta: float) -> void:
+	if attached:
+		self.position.x = log_ref.x
+		self.position.y = log_ref.y
 	direction = Input.get_axis("up", "down")
 	velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
 	velocity.x = move_toward(velocity.x, SPEED, acceleration)
@@ -27,3 +33,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 func game_over():
 	collision_shape_2d.set_deferred("disabled", false) 
+func attach_to_log(log_ref):
+	print("attaching shall commence")
+	attached = true
+	self.log_ref = log_ref
