@@ -13,7 +13,7 @@ func player_attaches_to_log(log_ref):
 func player_deattaches_to_log():
 	Global.is_decreasing = true
 func resetBar():
-	self.value=100
+	self.value = 100
 	Global.is_decreasing = true
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,4 +22,4 @@ func _process(delta: float) -> void:
 	else:
 		self.value += stamina_increase_rate_per_second*delta
 	if value == 0:
-		EventBus.game_over.emit()
+		EventBus.game_over.emit("stamina")
