@@ -10,7 +10,7 @@ func _ready() -> void:
 		distance.text += " yards"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.game_is_running:
+	if Global.game_is_running and not Global.attached:
 		Global.score += delta
 		distance.text = "Distance Traveled: " + str(int(floor(Global.score*Global.measure_unit)))
 		if Global.measure_unit == 0.9144:
