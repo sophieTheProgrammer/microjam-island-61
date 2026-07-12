@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var is_whirlpool = false
+@export var is_shark = false
 
 func _on_body_entered(_body: Node2D) -> void:
 	if !Global.DEBUG_DEATH:
@@ -10,7 +11,8 @@ func _on_body_entered(_body: Node2D) -> void:
 			tween.set_parallel(true)
 			tween.tween_property(_body, "scale", Vector2(0,0),1)
 			tween.tween_property(_body, "position", global_position,1)
-			
 			print("tweening")
+			EventBus.game_over.emit("whirlpool")
+		if is_shark:
+			EventBus.game_over.emit("shark")
 		print("dying shall commence now")
-		EventBus.game_over.emit()

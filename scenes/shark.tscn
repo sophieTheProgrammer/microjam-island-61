@@ -47,6 +47,7 @@ frame_progress = 1.0
 flip_v = true
 
 [node name="Death" parent="AnimatedSprite2D" unique_id=191725155 instance=ExtResource("3_po4rd")]
+is_shark = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Death" unique_id=114000227]
 position = Vector2(-59.2585, 7.407318)

@@ -5,13 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://c16xa3e3pvs63" path="res://scenes/fade.tscn" id="2_yev5y"]
 [ext_resource type="Texture2D" uid="uid://ds734gjw02jmp" path="res://art/progress bar/2.png" id="4_wm3ai"]
 [ext_resource type="Texture2D" uid="uid://dny855gh3ijqj" path="res://art/progress bar/1.png" id="5_8dubc"]
-[ext_resource type="Script" uid="uid://cusramdbwhn68" path="res://scenes/texture_progress_bar.gd" id="6_8dubc"]
+[ext_resource type="Script" uid="uid://cusramdbwhn68" path="res://scripts/texture_progress_bar.gd" id="6_8dubc"]
 
 [node name="Ui" type="CanvasLayer" unique_id=340363726]
 script = ExtResource("1_nt7q6")
 
 [node name="Fade" parent="." unique_id=383164694 instance=ExtResource("2_yev5y")]
-visible = true
 
 [node name="end screen" parent="." unique_id=101591616 instance=ExtResource("2_x4jx1")]
 

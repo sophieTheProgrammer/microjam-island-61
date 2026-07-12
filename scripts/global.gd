@@ -13,12 +13,16 @@ var measure_unit = 1
 const DEBUG_DEATH : bool = false
 var high_score = 0
 var game_is_running: bool = false
+func _ready() -> void:
+	AudioPlayer.play_music(AudioPlayer.START_SCREEN_SONG, -1)
+
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
 var attached = false
 var is_decreasing = false
 var fade = 0
+var stamina = 100
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
