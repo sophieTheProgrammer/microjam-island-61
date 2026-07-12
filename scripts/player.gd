@@ -5,8 +5,8 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 
-const SPEED = 800
-const y_multiplier = 10
+const SPEED = 900
+const y_multiplier = 8
 const acceleration = 10
 const buffer = 50
 var log_ref = null
@@ -32,9 +32,10 @@ func _physics_process(delta: float) -> void:
 					detach_from_log()
 				direction = 0
 				velocity = Vector2(100, 0)
+				animated_sprite_2d.play("log")
 			#log_ref.velocity = self.velocity
 		else:
-			animated_sprite_2d.play()
+			animated_sprite_2d.play("default")
 			cpu_particles_2d.show()
 			direction = Input.get_axis("up", "down")
 			velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
