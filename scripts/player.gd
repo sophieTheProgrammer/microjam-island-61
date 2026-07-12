@@ -13,13 +13,15 @@ var direction = 0
 func _ready() -> void:
 	Global.player_node = self
 	EventBus.game_over.connect(game_over)
-	EventBus.player_attaches_to_log.connect(game_over)
+	EventBus.player_attaches_to_log.connect(attach_to_log)
 	velocity.x = 0
 	
 func _physics_process(delta: float) -> void:
 	if attached:
-		self.position.x = log_ref.x
-		self.position.y = log_ref.y
+		self.position.x = log_ref.position.x
+		self.position.y = log_ref.position.y
+	if Input.is_anything_pressed():
+		attached = false
 	direction = Input.get_axis("up", "down")
 	velocity.y = move_toward(velocity.y, SPEED * direction * y_multiplier, acceleration * y_multiplier)
 	velocity.x = move_toward(velocity.x, SPEED, acceleration)
