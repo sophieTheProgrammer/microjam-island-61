@@ -59,6 +59,6 @@ func loadIndexItems(index, is_fading: bool):
 	#tutorial_label.text = tutorial_data[index]["text"]
 	await fade.fade(0, 0.2).finished
 func _on_start_button_pressed() -> void:
-	await fade.fade(1, 1.5).finished
+	await fade.fade(1, .25).finished
 	print("Starting game, from tutorial cutscene")
 	get_tree().change_scene_to_packed(Global.GAME)
