@@ -7,15 +7,14 @@ var LOG = preload("res://scenes/log.tscn")
 var sharks_to_spawn = randi() % 2 + 1
 var whirlpools_to_spawn = 1
 var logs_to_spawn = -1
-var chunks_since_log = 2
 var obstacle_spawn = [sharks_to_spawn, whirlpools_to_spawn, logs_to_spawn]
 func _ready() -> void:
 	if obstacle_spawn[2] != 0:
-		if randi() % (3-chunks_since_log) == 0:
+		if randi() % (3-Global.chunks_since_log) == 0:
 			logs_to_spawn = 1
-			chunks_since_log = 0
+			Global.chunks_since_log = 0
 		else:
-			chunks_since_log += 1
+			Global.chunks_since_log += 1
 		obstacle_spawn[2] = logs_to_spawn
 	spawn(obstacle_spawn[0], "shark")
 	spawn(obstacle_spawn[1], "whirlpool")
@@ -42,7 +41,7 @@ func spawn(num, type):
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	EventBus.spawn_new_chunk.emit()
-	
-	
+
+
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free()
