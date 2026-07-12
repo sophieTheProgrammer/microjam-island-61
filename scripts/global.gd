@@ -10,7 +10,7 @@ const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
 var measure_unit = 1
-const DEBUG_DEATH : bool = true
+const DEBUG_DEATH : bool = false
 var high_score = 0
 var game_is_running: bool = false
 var chunks_since_log = 2
