@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
 
 const SPEED = 500
 const y_multiplier = 5
@@ -20,7 +21,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.stop()
 		animated_sprite_2d.frame = 3
 		Global.is_decreasing = false
+		cpu_particles_2d.hide()
 	else:
+		cpu_particles_2d.show()
 		if Global.attached and Global.game_is_running:
 			self.position.x = log_ref.position.x
 			self.position.y = log_ref.position.y
