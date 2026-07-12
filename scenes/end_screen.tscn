@@ -7,27 +7,35 @@ script = ExtResource("1_kq7ac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1381339903]
 layer = 2
-visible = false
 
 [node name="score" type="RichTextLabel" parent="CanvasLayer" unique_id=339543457]
-offset_left = 117.0
-offset_top = 353.0
-offset_right = 1060.0
-offset_bottom = 520.0
+offset_left = 98.0
+offset_top = 350.0
+offset_right = 1041.0
+offset_bottom = 517.0
 text = "your score is (if you see this in 
 game there is a bug and we
 need to fix it lol)"
+horizontal_alignment = 1
 
 [node name="Space to restart" type="RichTextLabel" parent="CanvasLayer" unique_id=1233305378]
-offset_left = 120.0
-offset_top = 299.0
-offset_right = 755.0
-offset_bottom = 466.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.5
+offset_top = -83.5
+offset_right = 317.5
+offset_bottom = 83.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "press space to restart"
 
 [node name="EndTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=65157155]
-offset_left = 120.0
-offset_top = 161.0
-offset_right = 1006.0
-offset_bottom = 324.0
-text = "YOU DIED! ;)"
+offset_left = 147.0
+offset_top = 82.0
+offset_right = 1033.0
+offset_bottom = 245.0
+text = "YOU DIED!"
+horizontal_alignment = 1
