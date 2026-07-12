@@ -24,5 +24,5 @@ func _button_pressed(source: BaseButton) -> void:
 			get_tree().change_scene_to_packed(Global.SETTINGS)
 
 
-func _button_down(source: BaseButton) -> void:
+func _button_down(_source: BaseButton) -> void:
 	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 0)
