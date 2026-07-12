@@ -31,3 +31,8 @@ func _process(delta: float) -> void:
 	self.rotate(PI/2)
 	position = position.move_toward(rand, speed * 100 * delta)
 	speed = move_toward(float(speed), 0.0, float(.01))
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	await get_tree().create_timer(2.0).timeout
+	queue_free()

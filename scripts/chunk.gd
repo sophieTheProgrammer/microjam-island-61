@@ -36,7 +36,7 @@ func spawn(num, type):
 		new_obstacle.name = type
 		new_obstacle.position.x = randf_range((Global.viewport.x / 2)-50, 50+(-Global.viewport.x / 2)) + self.position.x
 		new_obstacle.position.y = randf_range((Global.viewport.y / 2)-50, 50+(-Global.viewport.y / 2)) + self.position.y
-		obstacles.add_child(new_obstacle)
+		get_parent().add_child(new_obstacle)
 
 
 

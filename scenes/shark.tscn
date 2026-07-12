@@ -74,3 +74,7 @@ angular_velocity_min = -406.34
 angular_velocity_max = 299.41
 scale_amount_min = 0.2
 scale_amount_max = 0.2
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1372436708]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
