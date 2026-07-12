@@ -17,6 +17,7 @@ func _ready() -> void:
 		AudioPlayer.play_music(song, -1)
 		print(\"song changing\")
 		EventBus.start_game.emit()
+		AudioPlayer.play_waves(AudioPlayer.WAVES, -3)
 	
 "
 

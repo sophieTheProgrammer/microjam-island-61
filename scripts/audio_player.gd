@@ -13,6 +13,7 @@ const GAME_SONG_1 = preload("res://audio/'miffy cafe' ｜ cute bossa type beat, 
 const GAME_SONG_2 = preload("res://audio/just another day.wav")
 const CHOMP = preload("res://audio/chomp.mp3")
 const SPLASH = preload("res://audio/SPLASH.mp3")
+const WAVES = preload("res://audio/WAVES.mp3")
 
 # the difference between playing music and SFX is that
 # only one song can play at a time so if you call the music 
@@ -49,4 +50,13 @@ func play_music(Stream, Volume=1):
 	await musicPlayer.finished
 	musicPlayer.queue_free()
 
+func play_waves(Stream, Volume=-2):
+	var fx = AudioStreamPlayer.new()
+	fx.stream = Stream
+	fx.name = "audio effects player"
+	fx.volume_db = Volume * SFX_Volume_Modifier
+	add_child(fx)
+	fx.play()
+	await fx.finished
 	
+	fx.queue_free()
