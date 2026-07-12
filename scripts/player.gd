@@ -18,16 +18,17 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	if not Global.game_is_running:
+		cpu_particles_2d.hide()
 		animated_sprite_2d.stop()
 		animated_sprite_2d.frame = 3
 		Global.is_decreasing = false
-		cpu_particles_2d.hide()
 	else:
-		cpu_particles_2d.show()
 		if Global.attached and Global.game_is_running:
-			self.position.x = log_ref.position.x
-			self.position.y = log_ref.position.y
+				self.position.x = log_ref.position.x
+				self.position.y = log_ref.position.y
 			#log_ref.velocity = self.velocity
+		else:
+			cpu_particles_2d.show()
 		if Input.is_action_just_pressed("escapethelog"):
 			detach_from_log()
 		direction = Input.get_axis("up", "down")
@@ -45,6 +46,7 @@ func game_over():
 	collision_shape_2d.set_deferred("disabled", false) 
 func attach_to_log(log_ref):
 	print("attaching shall commence")
+	cpu_particles_2d.hide()
 	Global.attached = true
 	self.log_ref = log_ref
 	animated_sprite_2d.stop()
@@ -52,5 +54,6 @@ func attach_to_log(log_ref):
 
 func detach_from_log():
 	EventBus.player_deattaches_to_log.emit()
+	cpu_particles_2d.show()
 	Global.attached = false
 	animated_sprite_2d.play()
