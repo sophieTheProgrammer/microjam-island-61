@@ -20,7 +20,7 @@ func gameover(source):
 		if Global.game_is_running:
 			end_title.text = "You died by " + source + ", try "
 			if source == "stamina":
-				end_title.text += "finding a log to breath next time"
+				end_title.text += "getting on a log to take a break next time"
 			else:
 				end_title.text += "avoiding them next time"
 			score.text = "Score: " + str(int(Global.score*Global.measure_unit))
@@ -28,7 +28,13 @@ func gameover(source):
 			if int(Global.score*Global.measure_unit) > Global.high_score:
 				print("YAYAYYASY HIGH SCHORE")
 				Global.high_score = int(Global.score*Global.measure_unit)
-				score.text = "New high score!" + "\n" +str(Global.high_score*Global.measure_unit)
+				score.text = "New high score!    " + str(int(Global.high_score*Global.measure_unit))
+				if Global.measure_unit == 1:
+					score.text += " yard"
+				else:
+					score.text += " meter"
+				if int(Global.high_score*Global.measure_unit) != 1:
+					score.text += "s"
 			$CanvasLayer.show()
 			Global.game_is_running = false
 			await Global.fade_node.fade(0.5, 0.2).finished
