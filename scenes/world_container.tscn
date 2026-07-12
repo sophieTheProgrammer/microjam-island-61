@@ -3,8 +3,14 @@
 [ext_resource type="Script" uid="uid://bq7afwyvipi4k" path="res://scripts/spawner.gd" id="1_nr1qe"]
 [ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_mlpqv"]
 [ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_rbrnk"]
+[ext_resource type="Texture2D" uid="uid://jl7eect6bnte" path="res://art/beachfront.png" id="4_mlpqv"]
 
 [node name="world_container" type="Node" unique_id=352490430]
+
+[node name="Beachfront" type="Sprite2D" parent="." unique_id=281945161]
+position = Vector2(463.99997, 11.999994)
+scale = Vector2(0.6342593, 0.6342593)
+texture = ExtResource("4_mlpqv")
 
 [node name="spawner" type="Node2D" parent="." unique_id=1679969869]
 script = ExtResource("1_nr1qe")
@@ -12,7 +18,6 @@ script = ExtResource("1_nr1qe")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=659092437]
 limit_top = 0
 limit_bottom = 0
-position_smoothing_enabled = true
 script = ExtResource("2_mlpqv")
 
 [node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_rbrnk")]

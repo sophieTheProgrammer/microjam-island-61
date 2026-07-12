@@ -16,10 +16,3 @@ script = SubResource("GDScript_yqjtg")
 [node name="ui" parent="." unique_id=1764728883 instance=ExtResource("1_uwrxv")]
 
 [node name="world_container" parent="." unique_id=352490430 instance=ExtResource("2_yqjtg")]
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1676534400]
-offset_left = -481.0
-offset_top = -411.0
-offset_right = -88.0
-offset_bottom = 441.0
-color = Color(0.7469829, 0.77603275, 0.64180636, 1)
