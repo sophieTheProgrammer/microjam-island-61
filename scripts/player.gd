@@ -31,6 +31,7 @@ func _physics_process(delta: float) -> void:
 				if Input.is_action_just_pressed("escapethelog"):
 					detach_from_log()
 				direction = 0
+				velocity = Vector2(100, 0)
 			#log_ref.velocity = self.velocity
 		else:
 			animated_sprite_2d.play()
