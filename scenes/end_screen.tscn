@@ -7,13 +7,12 @@ script = ExtResource("1_kq7ac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1381339903]
 layer = 2
-visible = false
 
 [node name="score" type="RichTextLabel" parent="CanvasLayer" unique_id=339543457]
-offset_left = 358.0
-offset_top = 272.0
-offset_right = 993.0
-offset_bottom = 439.0
+offset_left = 359.0
+offset_top = 273.0
+offset_right = 994.0
+offset_bottom = 440.0
 text = "your score is (if you see this in 
 game there is a bug and we
 need to fix it lol)"
