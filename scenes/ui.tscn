@@ -26,13 +26,15 @@ size_flags_vertical = 8
 text = "stamina"
 
 [node name="Distance" type="RichTextLabel" parent="." unique_id=679238702]
-offset_left = 18.0
+custom_minimum_size = Vector2(1000, 0)
+offset_left = 17.0
 offset_top = 16.0
-offset_right = 809.0
+offset_right = 808.0
 offset_bottom = 61.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Distance Traveled: "
+fit_content = true
 
 [node name="Control" type="Control" parent="." unique_id=1458706152]
 layout_mode = 3
