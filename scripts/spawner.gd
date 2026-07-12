@@ -7,9 +7,6 @@ func _ready() -> void:
 	EventBus.spawn_new_chunk.connect(spawn_chunk)
 	spawn_obstacleless_chunk()
 	spawn_obstacleless_chunk()
-	spawn_chunk()
-	spawn_chunk()
-	spawn_chunk()
 
 func _process(_delta: float) -> void:
 	pass
