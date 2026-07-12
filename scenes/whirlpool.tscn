@@ -19,14 +19,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxrhw"]
-radius = 28.004036
-height = 77.92195
+radius = 85.96866
+height = 209.99681
 
 [node name="whirlpool" type="Node2D" unique_id=1129214498]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1771988059]
-position = Vector2(1, 0)
-scale = Vector2(0.1329477, 0.13294768)
+position = Vector2(-1.9073486e-06, 1)
+scale = Vector2(0.24931958, 0.24931957)
 sprite_frames = SubResource("SpriteFrames_8butw")
 autoplay = "default"
 frame_progress = 0.5345303
@@ -34,6 +34,6 @@ frame_progress = 0.5345303
 [node name="Death" parent="." unique_id=191725155 instance=ExtResource("3_u2urf")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=2139440394]
-position = Vector2(-2.2888184e-05, -1.0000038)
+position = Vector2(2.401066e-10, 1.0000002)
 rotation = 1.5722843
 shape = SubResource("CapsuleShape2D_kxrhw")
