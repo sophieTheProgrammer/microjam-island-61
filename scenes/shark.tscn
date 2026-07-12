@@ -29,8 +29,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_po4rd"]
-radius = 77.77678
-height = 466.6607
+radius = 66.66581
+height = 666.6581
 
 [node name="shark" type="Node2D" unique_id=1939501999]
 scale = Vector2(0.3, 0.3)

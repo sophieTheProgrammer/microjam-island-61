@@ -12,7 +12,9 @@ func _on_body_entered(_body: Node2D) -> void:
 			tween.tween_property(_body, "scale", Vector2(0,0),1)
 			tween.tween_property(_body, "position", global_position,1)
 			print("tweening")
+			AudioPlayer.play_sfx(AudioPlayer.SPLASH, -1)
 			EventBus.game_over.emit("whirlpool")
 		if is_shark:
 			EventBus.game_over.emit("shark")
+			AudioPlayer.play_sfx(AudioPlayer.CHOMP, -1)
 		print("dying shall commence now")

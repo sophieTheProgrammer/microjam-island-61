@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jl7eect6bnte"
-path="res://.godot/imported/beachfront.png-66b2541f4723ed97e4a8c45d33b91a0b.ctex"
+uid="uid://b7dvdb0gwrus3"
+path="res://.godot/imported/Screenshot 2026-07-12 at 2.41.48 PM.png-e58f4a6280a42ce685615e63f2eb88f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/beachfront.png"
-dest_files=["res://.godot/imported/beachfront.png-66b2541f4723ed97e4a8c45d33b91a0b.ctex"]
+source_file="res://art/Screenshot 2026-07-12 at 2.41.48 PM.png"
+dest_files=["res://.godot/imported/Screenshot 2026-07-12 at 2.41.48 PM.png-e58f4a6280a42ce685615e63f2eb88f8.ctex"]
 
 [params]
 
