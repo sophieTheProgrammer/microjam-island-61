@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 	if Global.attached:
 		self.position.x = log_ref.position.x
 		self.position.y = log_ref.position.y
+		#log_ref.velocity = self.velocity
 	if Input.is_action_just_pressed("escapethelog"):
 		detach_from_log()
 	direction = Input.get_axis("up", "down")
