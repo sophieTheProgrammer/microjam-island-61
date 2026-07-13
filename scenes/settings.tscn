@@ -1,23 +1,34 @@
 [gd_scene format=3 uid="uid://1oudns23ey8i"]
 
 [ext_resource type="Script" uid="uid://bgaru8iapicjo" path="res://scripts/settings.gd" id="1_5p8wc"]
+[ext_resource type="Texture2D" uid="uid://dqlovcmnaiylp" path="res://art/IMG_3357.png" id="2_r6d6q"]
 
 [node name="Settings" type="Node2D" unique_id=1830954702 node_paths=PackedStringArray("sharkbtn")]
 script = ExtResource("1_5p8wc")
 sharkbtn = NodePath("VBoxContainer2/shark")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=668987634]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32.82, 32.82)
+color = Color(0.96862745, 0.9372549, 0.9254902, 1)
+
 [node name="BackButton" type="Button" parent="." unique_id=1614959797]
-offset_left = 1020.0
-offset_top = 578.0
-offset_right = 1134.0
-offset_bottom = 638.0
+offset_left = 974.0
+offset_top = 506.0
+offset_right = 1088.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_hover_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "Back"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=560423539]
-offset_left = 440.0
-offset_top = 10.0
-offset_right = 1067.0
-offset_bottom = 71.0
+offset_left = 340.0
+offset_top = 96.0
+offset_right = 967.0
+offset_bottom = 157.0
+theme_override_colors/default_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "SETTINGS SCREEN"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2085333744]
@@ -31,24 +42,28 @@ alignment = 1
 [node name="Music" type="RichTextLabel" parent="VBoxContainer" unique_id=932180382]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/default_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "Music Volume"
 horizontal_alignment = 1
 
 [node name="SFX" type="RichTextLabel" parent="VBoxContainer" unique_id=1751366109]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/default_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "SFX Volume"
 horizontal_alignment = 1
 
 [node name="Distance" type="RichTextLabel" parent="VBoxContainer" unique_id=1907862393]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/default_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "Distance"
 horizontal_alignment = 1
 
 [node name="dude no" type="RichTextLabel" parent="VBoxContainer" unique_id=1445906470]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/default_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 text = "DUDE NOO!! Mode"
 horizontal_alignment = 1
 
@@ -73,6 +88,10 @@ value = 100.0
 [node name="Distance" type="Button" parent="VBoxContainer2" unique_id=1844660137]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_focus_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_font_sizes/font_size = 30
 text = "Imperial"
 expand_icon = true
@@ -80,10 +99,20 @@ expand_icon = true
 [node name="shark" type="Button" parent="VBoxContainer2" unique_id=2117603685]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_focus_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_font_sizes/font_size = 30
 toggle_mode = true
 text = "Off"
 expand_icon = true
+
+[node name="Img3357" type="Sprite2D" parent="VBoxContainer2" unique_id=200956175]
+position = Vector2(-20.28, 319)
+scale = Vector2(0.6, 0.601)
+texture = ExtResource("2_r6d6q")
 
 [connection signal="button_down" from="BackButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="BackButton" to="." method="_button_pressed" flags=18]
