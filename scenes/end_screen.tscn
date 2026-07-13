@@ -40,3 +40,11 @@ offset_right = 1053.0
 offset_bottom = 271.0
 text = "YOU DIED!"
 horizontal_alignment = 1
+
+[node name="xaway" type="RichTextLabel" parent="CanvasLayer" unique_id=1681906231]
+offset_left = 199.0
+offset_top = 503.0
+offset_right = 963.0
+offset_bottom = 610.0
+text = "You are only X yards away from the bahamas!"
+horizontal_alignment = 1
