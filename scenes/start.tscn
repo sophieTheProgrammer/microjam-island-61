@@ -30,31 +30,44 @@ script = ExtResource("1_jaeev")
 
 [node name="StartScreenTutorialButton" type="Button" parent="CanvasLayer" unique_id=688141163]
 anchors_preset = -1
-anchor_top = -0.16820988
-anchor_right = 0.2847222
-offset_left = 290.0
-offset_top = 380.0
-offset_right = 462.0
-offset_bottom = 445.0
+anchor_left = -0.14192708
+anchor_top = -0.22685185
+anchor_right = -0.14192708
+anchor_bottom = -0.22685185
+offset_left = 425.0
+offset_top = 484.0
+offset_right = 620.0
+offset_bottom = 528.0
 theme = ExtResource("2_u80x2")
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
 text = "tutorial"
 metadata/_edit_use_anchors_ = true
 
 [node name="StartScreenStartButton" type="Button" parent="CanvasLayer" unique_id=622851497]
-offset_left = 419.0
-offset_top = 513.0
-offset_right = 683.0
-offset_bottom = 604.0
+offset_left = 243.5
+offset_top = 416.5
+offset_right = 490.5
+offset_bottom = 460.5
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
 text = "quickstart"
 
 [node name="StartScreenSettingsButton" type="Button" parent="CanvasLayer" unique_id=993410638]
-offset_left = 876.0
-offset_top = 7.0
-offset_right = 1140.0
-offset_bottom = 98.0
+offset_left = 940.5
+offset_top = 485.0
+offset_right = 1121.5
+offset_bottom = 526.0
+theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_font_sizes/font_size = 37
 text = "settings"
 
 [node name="StartTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=94163453]
+visible = false
 offset_left = 328.0
 offset_top = 55.0
 offset_right = 963.0
@@ -62,11 +75,12 @@ offset_bottom = 222.0
 text = "START SCREEN"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510053555]
-position = Vector2(571.6667, 310.25)
-scale = Vector2(0.6180556, 0.6180555)
+position = Vector2(576.00006, 323.00003)
+scale = Vector2(0.60671294, 0.60671294)
 sprite_frames = SubResource("SpriteFrames_h2h35")
 autoplay = "default"
-frame_progress = 0.5024828
+frame = 2
+frame_progress = 0.095029965
 
 [connection signal="button_down" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_pressed" flags=18]
