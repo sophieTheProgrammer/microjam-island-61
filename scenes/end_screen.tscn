@@ -36,10 +36,10 @@ grow_vertical = 2
 text = "press space to restart"
 
 [node name="EndTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=65157155]
-offset_left = 164.0
-offset_top = 59.0
-offset_right = 1050.0
-offset_bottom = 222.0
+offset_left = 170.0
+offset_top = 92.0
+offset_right = 1056.0
+offset_bottom = 255.0
 text = "YOU DIED!"
 horizontal_alignment = 1
 
@@ -52,6 +52,6 @@ text = "You are only X yards away from the bahamas!"
 horizontal_alignment = 1
 
 [node name="Img3361" type="Sprite2D" parent="CanvasLayer" unique_id=1263632472]
-position = Vector2(622, 410)
+position = Vector2(622, 391)
 scale = Vector2(0.3272386, 0.3488484)
 texture = ExtResource("2_6e1uj")

@@ -34,7 +34,7 @@ func _button_pressed(source: BaseButton) -> void:
 			distance_button.text = "Metric"
 		else:
 			Global.measure_unit = 1
-			distance_button.text = "American"
+			distance_button.text = "Imperial"
 	
 func _button_down(_source: BaseButton) -> void:
 	AudioPlayer.play_sfx(AudioPlayer.CLICK_002, 1)

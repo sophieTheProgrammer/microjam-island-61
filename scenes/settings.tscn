@@ -74,7 +74,7 @@ value = 100.0
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "American"
+text = "Imperial"
 expand_icon = true
 
 [node name="shark" type="Button" parent="VBoxContainer2" unique_id=2117603685]
