@@ -25,7 +25,7 @@ func gameover(source):
 				measure = "yards"
 			else:
 				measure = "meters"
-			xaway.text = "You are only " + str(DISTANCE_FROM_MIAMI-int(Global.score*Global.measure_unit)) + " " + measure +" away from the Bahamas!"
+			xaway.text = "You are only " + str(DISTANCE_FROM_MIAMI*Global.measure_unit-int(Global.score*Global.measure_unit)) + " " + measure +" away from the Bahamas!"
 			end_title.text = "You died by " + source + ", try "
 			if source == "stamina":
 				end_title.text += "getting on a log to take a break next time"
