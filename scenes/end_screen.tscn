@@ -8,13 +8,13 @@ script = ExtResource("1_kq7ac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1381339903]
 layer = 2
-visible = false
 
 [node name="score" type="RichTextLabel" parent="CanvasLayer" unique_id=339543457]
-offset_left = 136.0
+offset_left = 115.0
 offset_top = 258.0
-offset_right = 1079.0
+offset_right = 1058.0
 offset_bottom = 425.0
+size_flags_horizontal = 4
 text = "your score is (if you see this in 
 game there is a bug and we
 need to fix it lol)"
@@ -27,31 +27,37 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -291.0
+offset_left = -312.0
 offset_top = -138.0
-offset_right = 344.0
+offset_right = 323.0
 offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 text = "press space to restart"
+metadata/_edit_use_anchors_ = true
 
 [node name="EndTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=65157155]
-offset_left = 170.0
+offset_left = 149.0
 offset_top = 92.0
-offset_right = 1056.0
+offset_right = 1035.0
 offset_bottom = 255.0
+size_flags_horizontal = 4
 text = "YOU DIED!"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="xaway" type="RichTextLabel" parent="CanvasLayer" unique_id=1681906231]
-offset_left = 199.0
+offset_left = 178.0
 offset_top = 503.0
-offset_right = 963.0
+offset_right = 942.0
 offset_bottom = 610.0
+size_flags_horizontal = 4
 text = "You are only X yards away from the bahamas!"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Img3361" type="Sprite2D" parent="CanvasLayer" unique_id=1263632472]
-position = Vector2(622, 391)
+position = Vector2(601, 391)
 scale = Vector2(0.3272386, 0.3488484)
 texture = ExtResource("2_6e1uj")
