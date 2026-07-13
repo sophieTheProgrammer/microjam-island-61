@@ -30,10 +30,10 @@ script = ExtResource("1_jaeev")
 
 [node name="StartScreenTutorialButton" type="Button" parent="CanvasLayer" unique_id=688141163]
 anchors_preset = -1
-anchor_left = -0.14192708
-anchor_top = -0.22685185
-anchor_right = -0.14192708
-anchor_bottom = -0.22685185
+anchor_left = -0.1779514
+anchor_top = -0.25617284
+anchor_right = -0.105902776
+anchor_bottom = -0.19753087
 offset_left = 425.0
 offset_top = 484.0
 offset_right = 620.0
@@ -43,23 +43,22 @@ theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
 theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
 text = "tutorial"
-metadata/_edit_use_anchors_ = true
 
 [node name="StartScreenStartButton" type="Button" parent="CanvasLayer" unique_id=622851497]
-offset_left = 243.5
-offset_top = 416.5
-offset_right = 490.5
-offset_bottom = 460.5
+offset_left = 199.0
+offset_top = 394.0
+offset_right = 535.0
+offset_bottom = 483.0
 theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
 theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
 text = "quickstart"
 
 [node name="StartScreenSettingsButton" type="Button" parent="CanvasLayer" unique_id=993410638]
-offset_left = 940.5
-offset_top = 485.0
-offset_right = 1121.5
-offset_bottom = 526.0
+offset_left = 892.0
+offset_top = 458.0
+offset_right = 1170.0
+offset_bottom = 553.0
 theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
 theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)

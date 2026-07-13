@@ -50,11 +50,13 @@ func play_music(Stream, Volume=1):
 	await musicPlayer.finished
 	musicPlayer.queue_free()
 
-func play_waves(Stream, Volume=-2):
+func play_waves(Stream, Volume=--2):
 	var fx = AudioStreamPlayer.new()
 	fx.stream = Stream
 	fx.name = "audio effects player"
 	fx.volume_db = Volume * SFX_Volume_Modifier
+	if fx.volume_db > 0:
+		fx.volume_db = 0 - fx.volume_db
 	add_child(fx)
 	fx.play()
 	await fx.finished

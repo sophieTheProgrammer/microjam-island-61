@@ -32,5 +32,5 @@ func _on_area_entered(area: Area2D) -> void:
 			print("tweening")
 			if area.name == "Area2D":
 				EventBus.deattached_log.emit()
-			AudioPlayer.play_sfx(AudioPlayer.SPLASH, -1)
+			#AudioPlayer.play_sfx(AudioPlayer.SPLASH, -1)
 			area.queue_free()
