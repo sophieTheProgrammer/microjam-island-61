@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://b3ax8nw7ldqrb"]
 
 [ext_resource type="Script" uid="uid://oek1ev6njm7s" path="res://scripts/end_screen.gd" id="1_kq7ac"]
+[ext_resource type="Texture2D" uid="uid://bklh8bgndyycr" path="res://art/IMG_3361.png" id="2_6e1uj"]
 
 [node name="end screen" type="Node2D" unique_id=101591616]
 script = ExtResource("1_kq7ac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1381339903]
 layer = 2
-visible = false
 
 [node name="score" type="RichTextLabel" parent="CanvasLayer" unique_id=339543457]
-offset_left = 118.0
-offset_top = 376.0
-offset_right = 1061.0
-offset_bottom = 543.0
+offset_left = 136.0
+offset_top = 258.0
+offset_right = 1079.0
+offset_bottom = 425.0
 text = "your score is (if you see this in 
 game there is a bug and we
 need to fix it lol)"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Space to restart" type="RichTextLabel" parent="CanvasLayer" unique_id=1233305378]
 anchors_preset = 8
@@ -25,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -297.5
-offset_top = -57.5
-offset_right = 337.5
-offset_bottom = 109.5
+offset_left = -291.0
+offset_top = -138.0
+offset_right = 344.0
+offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "press space to restart"
@@ -40,3 +41,8 @@ offset_right = 1053.0
 offset_bottom = 271.0
 text = "YOU DIED!"
 horizontal_alignment = 1
+
+[node name="Img3361" type="Sprite2D" parent="CanvasLayer" unique_id=1263632472]
+position = Vector2(610.00006, 454.99997)
+scale = Vector2(0.40211132, 0.40211132)
+texture = ExtResource("2_6e1uj")
