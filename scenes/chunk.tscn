@@ -1,13 +1,20 @@
 [gd_scene format=3 uid="uid://dau314vrra7i6"]
 
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
-[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/waves.png" id="2_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/WAVES.png" id="2_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://crrwebums7cof" path="res://art/jam_gradint.png" id="3_c3gog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p8wc"]
 size = Vector2(120, 830)
 
 [node name="chunk" type="Node2D" unique_id=709913294]
 script = ExtResource("1_h8q3v")
+
+[node name="JamGradint" type="Sprite2D" parent="." unique_id=1700242879]
+modulate = Color(1, 1, 1, 0.29803923)
+position = Vector2(-0.5000179, 1.4781952e-05)
+scale = Vector2(0.60052085, 0.6)
+texture = ExtResource("3_c3gog")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=114175988]
 
@@ -58,6 +65,8 @@ modulate = Color(1, 1, 1, 0.70000005)
 position = Vector2(116, -89)
 scale = Vector2(0.21617346, 0.28295064)
 texture = ExtResource("2_jtw3q")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=195765526]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

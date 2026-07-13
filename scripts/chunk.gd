@@ -9,6 +9,8 @@ var whirlpools_to_spawn = 1
 var logs_to_spawn = -1
 var obstacle_spawn = [sharks_to_spawn, whirlpools_to_spawn, logs_to_spawn]
 func _ready() -> void:
+	if randi()%3 == 0:
+		whirlpools_to_spawn = 0
 	if obstacle_spawn[2] != 0:
 		if randi() % (3-Global.chunks_since_log) == 0:
 			logs_to_spawn = 1
