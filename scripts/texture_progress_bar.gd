@@ -2,6 +2,11 @@ extends TextureProgressBar
 
 @export var stamina_decrease_rate_per_second = 10
 @export var stamina_increase_rate_per_second = 45
+
+const yellow_progress = preload("res://art/progress bar/1.png")
+const red_progress = preload("res://art/progress bar/3.png")
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	self.value = 100
@@ -23,3 +28,10 @@ func _process(delta: float) -> void:
 		self.value += stamina_increase_rate_per_second*delta
 	if value == 0:
 		EventBus.game_over.emit("stamina")
+
+	# change color of bar depending on how much stamina
+	
+	if self.value < 20:
+		texture_progress = red_progress
+	else:
+		texture_progress = yellow_progress

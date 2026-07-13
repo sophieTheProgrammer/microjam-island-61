@@ -2,6 +2,26 @@
 
 [ext_resource type="Script" uid="uid://bpq6m57xt5yl2" path="res://scripts/start_screen.gd" id="1_jaeev"]
 [ext_resource type="Theme" uid="uid://dn4leoiqtpx61" path="res://other/default.tres" id="2_u80x2"]
+[ext_resource type="Texture2D" uid="uid://dq3uqgeljjpsa" path="res://art/IMG_3358.png" id="3_0auqf"]
+[ext_resource type="Texture2D" uid="uid://be7cy8ycup50v" path="res://art/IMG_3359.png" id="4_y16t7"]
+[ext_resource type="Texture2D" uid="uid://dvmxap74f645g" path="res://art/IMG_3360.png" id="5_4ge6i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0auqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y16t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4ge6i")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="start" type="Node2D" unique_id=1507737572]
 script = ExtResource("1_jaeev")
@@ -40,6 +60,13 @@ offset_top = 55.0
 offset_right = 963.0
 offset_bottom = 222.0
 text = "START SCREEN"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510053555]
+position = Vector2(571.6667, 310.25)
+scale = Vector2(0.6180556, 0.6180555)
+sprite_frames = SubResource("SpriteFrames_h2h35")
+autoplay = "default"
+frame_progress = 0.6115689
 
 [connection signal="button_down" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_pressed" flags=18]
