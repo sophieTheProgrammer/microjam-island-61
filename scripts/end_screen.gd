@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var score: RichTextLabel = $CanvasLayer/score
-@onready var end_title: RichTextLabel = $CanvasLayer/EndTitle
 @onready var xaway: RichTextLabel = $CanvasLayer/xaway
 #yards
 const DISTANCE_FROM_MIAMI :int = 96800
@@ -26,11 +25,6 @@ func gameover(source):
 			else:
 				measure = "meters"
 			xaway.text = "You are only " + str(DISTANCE_FROM_MIAMI-int(Global.score*Global.measure_unit)) + " " + measure +" away from the Bahamas!"
-			end_title.text = "You died by " + source + ", try "
-			if source == "stamina":
-				end_title.text += "getting on a log to take a break next time"
-			else:
-				end_title.text += "avoiding them next time"
 			score.text = "Score: " + str(int(Global.score*Global.measure_unit))
 			score.text += "\nHigh score: " + str(Global.high_score*Global.measure_unit)
 			if int(Global.score*Global.measure_unit) > Global.high_score:
