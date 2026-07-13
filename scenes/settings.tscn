@@ -13,6 +13,11 @@ offset_bottom = 40.0
 scale = Vector2(32.82, 32.82)
 color = Color(0.96862745, 0.9372549, 0.9254902, 1)
 
+[node name="Img3357" type="Sprite2D" parent="." unique_id=200956175]
+position = Vector2(581.72, 324)
+scale = Vector2(0.6, 0.601)
+texture = ExtResource("2_r6d6q")
+
 [node name="BackButton" type="Button" parent="." unique_id=1614959797]
 offset_left = 974.0
 offset_top = 506.0
@@ -70,8 +75,9 @@ horizontal_alignment = 1
 [node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=367029549]
 custom_minimum_size = Vector2(300, 0)
 offset_left = 602.0
+offset_top = 198.5
 offset_right = 1058.0
-offset_bottom = 648.0
+offset_bottom = 449.5
 theme_override_constants/separation = 17
 alignment = 1
 
@@ -91,7 +97,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_colors/font_focus_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
-theme_override_colors/font_hover_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
 theme_override_font_sizes/font_size = 30
 text = "Imperial"
 expand_icon = true
@@ -100,19 +107,15 @@ expand_icon = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
-theme_override_colors/font_focus_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_focus_color = Color(0.2, 0.14117648, 0.05882353, 1)
 theme_override_colors/font_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
-theme_override_colors/font_hover_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.14117648, 0.05882353, 1)
+theme_override_colors/font_outline_color = Color(0.6745098, 0.49803922, 0.27058825, 1)
 theme_override_font_sizes/font_size = 30
 toggle_mode = true
 text = "Off"
 expand_icon = true
-
-[node name="Img3357" type="Sprite2D" parent="VBoxContainer2" unique_id=200956175]
-position = Vector2(-20.28, 319)
-scale = Vector2(0.6, 0.601)
-texture = ExtResource("2_r6d6q")
 
 [connection signal="button_down" from="BackButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="BackButton" to="." method="_button_pressed" flags=18]
