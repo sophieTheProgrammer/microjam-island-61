@@ -18,7 +18,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_4ge6i")
 }],
-"loop": 1,
+"loop": 2,
 "name": &"default",
 "speed": 2.0
 }]
@@ -79,8 +79,7 @@ position = Vector2(576.00006, 323.00003)
 scale = Vector2(0.60671294, 0.60671294)
 sprite_frames = SubResource("SpriteFrames_h2h35")
 autoplay = "default"
-frame = 2
-frame_progress = 0.095029965
+frame_progress = 0.6115689
 
 [connection signal="button_down" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_down" flags=18]
 [connection signal="pressed" from="CanvasLayer/StartScreenTutorialButton" to="." method="_button_pressed" flags=18]
