@@ -1,6 +1,10 @@
 extends CanvasLayer
 @onready var distance: RichTextLabel = $Distance
 @onready var spacetolaunch: RichTextLabel = $spacetolaunch
+@onready var stamina: RichTextLabel = $stamina
+@onready var texture_progress_bar: TextureProgressBar = $Control/TextureProgressBar
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spacetolaunch.show()
@@ -20,3 +24,11 @@ func _process(delta: float) -> void:
 			distance.text += " meters"
 		else:
 			distance.text += " yards"
+	stamina.show()
+	distance.show()
+	texture_progress_bar.show()
+	if not Global.game_is_running:
+		stamina.hide()
+		distance.hide()
+		texture_progress_bar.hide()
+		
