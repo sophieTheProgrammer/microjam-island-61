@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3ax8nw7ldqrb"]
 
 [ext_resource type="Script" uid="uid://oek1ev6njm7s" path="res://scripts/end_screen.gd" id="1_kq7ac"]
-[ext_resource type="Texture2D" uid="uid://bklh8bgndyycr" path="res://art/IMG_3361.png" id="2_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://bklh8bgndyycr" path="res://art/grave.png" id="2_6e1uj"]
 
 [node name="end screen" type="Node2D" unique_id=101591616]
 script = ExtResource("1_kq7ac")
@@ -11,67 +11,56 @@ layer = 2
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=298228628]
 visible = false
-offset_right = 1166.0
-offset_bottom = 651.0
+offset_right = 1152.0
+offset_bottom = 649.0
 color = Color(0.52906674, 0.5290667, 0.5290667, 1)
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=717873603]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1015686476]
+offset_right = 1192.0
+offset_bottom = 675.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
-[node name="Img3361" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1263632472]
-position = Vector2(596, 491)
-scale = Vector2(0.47070086, 0.5017844)
-texture = ExtResource("2_6e1uj")
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer" unique_id=9757993]
+custom_maximum_size = Vector2(1112, 619)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="EndTitle" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=65157155]
-layout_mode = 1
-anchors_preset = -1
-anchor_bottom = -0.11265432
-offset_left = 156.0
-offset_top = 27.0
-offset_right = 1042.0
-offset_bottom = 190.00002
+[node name="You Died" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=65157155]
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/normal_font_size = 100
 text = "YOU DIED!"
+fit_content = true
 horizontal_alignment = 1
 
-[node name="score" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=339543457]
-layout_mode = 0
-offset_left = 144.0
-offset_top = 196.0
-offset_right = 1087.0
-offset_bottom = 363.0
-size_flags_horizontal = 4
-text = "High Score: placeholder thing!"
-horizontal_alignment = 1
-
-[node name="Space to restart" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1233305378]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.32098764
-offset_left = 255.0
-offset_top = 104.0
-offset_right = 890.0
-offset_bottom = 271.00003
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Space to restart" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1233305378]
+layout_mode = 2
 size_flags_horizontal = 4
 text = "press space to restart"
+fit_content = true
 
-[node name="xaway" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1681906231]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 257.0
-offset_right = 1141.0
-offset_bottom = 364.0
+[node name="score" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=339543457]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "High Score: placeholder thing!"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="xaway" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1681906231]
+layout_mode = 2
 size_flags_horizontal = 4
 text = "You are only X yards away from the bahamas!"
+fit_content = true
 horizontal_alignment = 1
+
+[node name="grave" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=170306450]
+custom_maximum_size = Vector2(-1, 350)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_6e1uj")
+stretch_mode = 5

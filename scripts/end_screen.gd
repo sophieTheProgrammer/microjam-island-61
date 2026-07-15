@@ -1,8 +1,7 @@
 extends Node2D
 
-@onready var score: RichTextLabel = $CanvasLayer/Control/score
-@onready var xaway: RichTextLabel = $CanvasLayer/Control/xaway
-#yards
+@onready var score: RichTextLabel = $CanvasLayer/MarginContainer/VBoxContainer/score
+@onready var xaway: RichTextLabel = $CanvasLayer/MarginContainer/VBoxContainer/xaway
 const DISTANCE_FROM_MIAMI :int = 96800
 
 func _ready():

@@ -14,7 +14,7 @@ layer = 2
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1232120192]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=835389658]
-offset_right = 1175.0
+offset_right = 1152.0
 offset_bottom = 667.0
 color = Color(0.9679517, 0.9387817, 0.92455155, 1)
 
