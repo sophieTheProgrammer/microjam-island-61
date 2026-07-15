@@ -22,6 +22,7 @@ offset_bottom = 142.0
 scale = Vector2(0.54, 0.54)
 size_flags_horizontal = 10
 size_flags_vertical = 2
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 text = "stamina"
 
 [node name="spacetolaunch" type="RichTextLabel" parent="." unique_id=639491684]
@@ -34,6 +35,7 @@ offset_bottom = 627.0
 scale = Vector2(2, 2)
 size_flags_horizontal = 0
 size_flags_vertical = 8
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 theme_override_font_sizes/normal_font_size = 24
 text = "Press space to start!"
 fit_content = true
@@ -46,6 +48,7 @@ offset_right = 808.0
 offset_bottom = 61.0
 size_flags_horizontal = 0
 size_flags_vertical = 8
+theme_override_colors/default_color = Color(0.9000013, 0.76980877, 0.59315974, 1)
 text = "Distance Traveled: "
 fit_content = true
 

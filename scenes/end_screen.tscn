@@ -33,6 +33,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 theme_override_font_sizes/normal_font_size = 100
 text = "YOU DIED!"
 fit_content = true
@@ -41,12 +42,14 @@ horizontal_alignment = 1
 [node name="Space to restart" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1233305378]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 text = "press space to restart"
 fit_content = true
 
 [node name="score" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=339543457]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 text = "High Score: placeholder thing!"
 fit_content = true
 horizontal_alignment = 1
@@ -54,6 +57,7 @@ horizontal_alignment = 1
 [node name="xaway" type="RichTextLabel" parent="CanvasLayer/MarginContainer/VBoxContainer" unique_id=1681906231]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/default_color = Color(0.9019608, 0.76862746, 0.5921569, 1)
 text = "You are only X yards away from the bahamas!"
 fit_content = true
 horizontal_alignment = 1

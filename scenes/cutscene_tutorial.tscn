@@ -16,10 +16,10 @@ layer = 2
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=835389658]
 offset_right = 1152.0
 offset_bottom = 667.0
-color = Color(0.9679517, 0.9387817, 0.92455155, 1)
+color = Color(0.8509804, 0.9764706, 0.99607843, 1)
 
 [node name="TutorialImage" type="Sprite2D" parent="CanvasLayer" unique_id=1665876256]
-position = Vector2(507, 291)
+position = Vector2(597, 333.99997)
 scale = Vector2(0.4846519, 0.4846519)
 texture = ExtResource("3_4lcpb")
 
