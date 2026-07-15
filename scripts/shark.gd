@@ -2,7 +2,7 @@ extends Node2D
 @onready var anisprite: AnimatedSprite2D = $AnimatedSprite2D
 const FRAME_COUNT = 5
 const ACCELERATION = 4
-const MAX_SPEED = 6
+const MAX_SPEED = 3
 var rand_x
 var rand_y
 var velocity = Vector2.ZERO
