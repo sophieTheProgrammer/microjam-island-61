@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cpu_particles_2d: CPUParticles2D = $CPUParticles2D
+@onready var beach_sprite: Sprite2D = $Sprite2D
 
 const SPEED = 900
 const Y_MULT = 8
@@ -16,12 +17,15 @@ func _ready() -> void:
 	EventBus.player_attaches_to_log.connect(attach_to_log)
 	EventBus.deattached_log.connect(detach_from_log)
 	velocity.x = 0
+	beach_sprite.show()
 	
 func _physics_process(delta: float) -> void:
 	if not Global.game_is_running:
 		cpu_particles_2d.hide()
 		animated_sprite_2d.stop()
+		beach_sprite.show()
 		animated_sprite_2d.frame = 0
+		animated_sprite_2d.hide()
 		Global.is_decreasing = false
 		Global.attached = false
 	else:
@@ -35,6 +39,8 @@ func _physics_process(delta: float) -> void:
 				animated_sprite_2d.play("log")
 			#log_ref.velocity = self.velocity
 		else:
+			animated_sprite_2d.show()
+			beach_sprite.hide()
 			animated_sprite_2d.play("default")
 			cpu_particles_2d.show()
 			direction = Input.get_axis("up", "down")
