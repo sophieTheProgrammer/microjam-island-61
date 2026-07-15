@@ -9,7 +9,6 @@ func _ready() -> void:
 	spawn_obstacleless_chunk()
 
 func _process(_delta: float) -> void:
-	print(Global.viewport)
 	pass
 	
 func spawn_chunk():
