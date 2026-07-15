@@ -7,6 +7,7 @@ const DISTANCE_FROM_MIAMI :int = 96800
 
 func _ready():
 	EventBus.game_over.connect(gameover)
+	$CanvasLayer.hide()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	
@@ -35,7 +36,7 @@ func gameover(source):
 			if int(Global.score*Global.measure_unit) > Global.high_score:
 				print("YAYAYYASY HIGH SCHORE")
 				Global.high_score = int(Global.score*Global.measure_unit)
-				score.text = "New high score!    " + str(int(Global.high_score*Global.measure_unit))
+				score.text = "New high score! " + str(int(Global.high_score*Global.measure_unit))
 				if Global.measure_unit == 1:
 					score.text += " yard"
 				else:
