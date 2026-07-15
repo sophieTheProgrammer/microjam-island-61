@@ -9,55 +9,69 @@ script = ExtResource("1_kq7ac")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1381339903]
 layer = 2
 
-[node name="score" type="RichTextLabel" parent="CanvasLayer" unique_id=339543457]
-offset_left = 113.0
-offset_top = 208.0
-offset_right = 1056.0
-offset_bottom = 375.0
-size_flags_horizontal = 4
-text = "your score is (if you see this in 
-game there is a bug and we
-need to fix it lol)"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=298228628]
+visible = false
+offset_right = 1166.0
+offset_bottom = 651.0
+color = Color(0.52906674, 0.5290667, 0.5290667, 1)
 
-[node name="Space to restart" type="RichTextLabel" parent="CanvasLayer" unique_id=1233305378]
-anchors_preset = 8
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=717873603]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Img3361" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1263632472]
+position = Vector2(596, 491)
+scale = Vector2(0.47070086, 0.5017844)
+texture = ExtResource("2_6e1uj")
+
+[node name="EndTitle" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=65157155]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = -0.11265432
+offset_left = 156.0
+offset_top = 27.0
+offset_right = 1042.0
+offset_bottom = 190.00002
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/normal_font_size = 100
+text = "YOU DIED!"
+horizontal_alignment = 1
+
+[node name="score" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=339543457]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 196.0
+offset_right = 1087.0
+offset_bottom = 363.0
+size_flags_horizontal = 4
+text = "High Score: placeholder thing!"
+horizontal_alignment = 1
+
+[node name="Space to restart" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1233305378]
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -312.0
-offset_top = -177.0
-offset_right = 323.0
-offset_bottom = -10.0
+anchor_bottom = 0.32098764
+offset_left = 255.0
+offset_top = 104.0
+offset_right = 890.0
+offset_bottom = 271.00003
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 text = "press space to restart"
-metadata/_edit_use_anchors_ = true
 
-[node name="EndTitle" type="RichTextLabel" parent="CanvasLayer" unique_id=65157155]
-offset_left = 149.0
-offset_top = 92.0
-offset_right = 1035.0
-offset_bottom = 255.0
-size_flags_horizontal = 4
-text = "YOU DIED!"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="xaway" type="RichTextLabel" parent="CanvasLayer" unique_id=1681906231]
-offset_left = 24.0
-offset_top = 482.0
-offset_right = 1138.0
-offset_bottom = 589.0
+[node name="xaway" type="RichTextLabel" parent="CanvasLayer/Control" unique_id=1681906231]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 257.0
+offset_right = 1141.0
+offset_bottom = 364.0
 size_flags_horizontal = 4
 text = "You are only X yards away from the bahamas!"
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Img3361" type="Sprite2D" parent="CanvasLayer" unique_id=1263632472]
-position = Vector2(610.7742, 382.4375)
-scale = Vector2(0.3580719, 0.38171783)
-texture = ExtResource("2_6e1uj")
