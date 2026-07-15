@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 const SPEED = 900
 const Y_MULT = 8
-const ACCELERATION = 10
+const ACCELERATION = 6
 const BUFFER = 75
 var log_ref = null
 var direction = 0
