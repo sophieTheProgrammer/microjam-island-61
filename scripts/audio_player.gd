@@ -28,7 +28,7 @@ func play_sfx(Stream, Volume):
 	fx.name = "audio effects player"
 	if Volume == 6767:
 		fx.volume_db = 4
-		fx.pitch_scale = 1.3
+		fx.pitch_scale = 1.5
 	else:	
 		fx.volume_db = Volume * SFX_Volume_Modifier
 	add_child(fx)
