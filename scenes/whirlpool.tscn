@@ -43,8 +43,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxrhw"]
-radius = 85.96866
-height = 209.99681
+radius = 104.998405
+height = 234.0057
 
 [node name="whirlpool" type="Node2D" unique_id=1129214498]
 script = SubResource("GDScript_h2h35")
