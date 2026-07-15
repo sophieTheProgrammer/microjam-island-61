@@ -8,10 +8,10 @@ script = ExtResource("1_5p8wc")
 sharkbtn = NodePath("VBoxContainer2/shark")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=668987634]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 36.68495
+offset_bottom = 20.90189
 scale = Vector2(32.82, 32.82)
-color = Color(0.96862745, 0.9372549, 0.9254902, 1)
+color = Color(0.8509804, 0.9764706, 0.99607843, 1)
 
 [node name="Img3357" type="Sprite2D" parent="." unique_id=200956175]
 position = Vector2(581.72, 324)

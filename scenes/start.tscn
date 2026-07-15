@@ -74,8 +74,8 @@ offset_bottom = 222.0
 text = "START SCREEN"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=510053555]
-position = Vector2(576.00006, 323.00003)
-scale = Vector2(0.60671294, 0.60671294)
+position = Vector2(573.26483, 324.34375)
+scale = Vector2(0.62967396, 0.6456597)
 sprite_frames = SubResource("SpriteFrames_h2h35")
 autoplay = "default"
 frame_progress = 0.6115689
