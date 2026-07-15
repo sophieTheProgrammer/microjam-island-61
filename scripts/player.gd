@@ -52,6 +52,7 @@ func _physics_process(delta: float) -> void:
 
 func attach_to_log(log_ref):
 	print("attaching shall commence")
+	AudioPlayer.play_sfx(AudioPlayer.LOG, 1)
 	cpu_particles_2d.hide()
 	Global.attached = true
 	self.log_ref = log_ref

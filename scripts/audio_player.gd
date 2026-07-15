@@ -14,6 +14,7 @@ const GAME_SONG_2 = preload("res://audio/just another day.wav")
 const CHOMP = preload("res://audio/chomp.mp3")
 const SPLASH = preload("res://audio/SPLASH.mp3")
 const WAVES = preload("res://audio/WAVES.mp3")
+const LOG = preload("res://audio/logon.mp3")
 
 # the difference between playing music and SFX is that
 # only one song can play at a time so if you call the music 
