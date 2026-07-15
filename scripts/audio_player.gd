@@ -22,10 +22,15 @@ const LOG = preload("res://audio/logon.mp3")
 # simultaneously
 
 func play_sfx(Stream, Volume):
+
 	var fx = AudioStreamPlayer.new()
 	fx.stream = Stream
 	fx.name = "audio effects player"
-	fx.volume_db = Volume * SFX_Volume_Modifier
+	if Volume == 6767:
+		fx.volume_db = 4
+		fx.pitch_scale = 1.3
+	else:	
+		fx.volume_db = Volume * SFX_Volume_Modifier
 	add_child(fx)
 	fx.play()
 	await fx.finished

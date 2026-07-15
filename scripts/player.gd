@@ -61,6 +61,7 @@ func attach_to_log(log_ref):
 	
 
 func detach_from_log():
+	AudioPlayer.play_sfx(AudioPlayer.LOG, 6767)
 	EventBus.player_deattaches_to_log.emit()
 	cpu_particles_2d.show()
 	Global.attached = false
