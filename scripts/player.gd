@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	if not Global.game_is_running:
 		cpu_particles_2d.hide()
 		animated_sprite_2d.stop()
-		animated_sprite_2d.frame = 3
+		animated_sprite_2d.frame = 0
 		Global.is_decreasing = false
 		Global.attached = false
 	else:
