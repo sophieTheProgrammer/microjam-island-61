@@ -20,10 +20,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
 var score = 0
-var attached = false
 var is_decreasing = true
 var fade = 0
 var stamina = 100
+var player_is_swimming: bool = false
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()

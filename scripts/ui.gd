@@ -17,7 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("restart game"):
 		spacetolaunch.hide()
-	if Global.game_is_running and not Global.attached:
+	if Global.game_is_running and Global.player_is_swimming:
 		Global.score += delta
 		distance.text = "Distance Traveled: " + str(int(floor(Global.score*Global.measure_unit)))
 		if Global.measure_unit == 0.9144:
