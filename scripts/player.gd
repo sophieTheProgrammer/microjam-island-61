@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 			handle_log()
 		player_state.DEAD:
 			handle_death()
-	print(state)
+	#print(state)
 func attach_to_log(log_ref):
 	state = player_state.ON_LOG
 	print("attaching shall commence")

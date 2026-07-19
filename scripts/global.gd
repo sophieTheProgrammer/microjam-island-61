@@ -1,29 +1,43 @@
 extends Node
 
+# Scenes
 const START = preload("res://scenes/start.tscn")
 const GAME = preload("res://scenes/game.tscn")
 const SETTINGS = preload("res://scenes/settings.tscn")
 const TUTORIAL = preload("res://scenes/cutscene_tutorial.tscn")
 const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 
-@onready var viewport = get_viewport().get_visible_rect().size
+
+# References
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
-var measure_unit = 1
-const DEBUG_DEATH : bool = false
+
+# Game State
 var high_score = 0
 var game_is_running: bool = false
 var chunks_since_log = 2
+var score = 0
+var player_is_swimming: bool = false
+
+# Debug/Settings
+const DEBUG_DEATH : bool = false
+var measure_unit = 1
+var dudeno = false
+
+# Stamina
+var is_decreasing = true
+var stamina = 100
+
+# Other
+var fade = 0
+@onready var viewport = get_viewport().get_visible_rect().size
+
+
 func _ready() -> void:
 	AudioPlayer.play_music(AudioPlayer.START_SCREEN_SONG, -1)
 
 func _process(_delta: float) -> void:
 	viewport = get_viewport().get_visible_rect().size
-var score = 0
-var is_decreasing = true
-var fade = 0
-var stamina = 100
-var player_is_swimming: bool = false
 
 func start_game(reloadWorld):
 	EventBus.start_game.emit()
@@ -48,6 +62,3 @@ func start_game(reloadWorld):
 
 		get_tree().change_scene_to_packed(GAME)
 		await fade_node.fade(0,.15).finished
-		
-		
-var dudeno = false

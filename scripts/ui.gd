@@ -8,22 +8,12 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spacetolaunch.show()
-	distance.text = "Distance Traveled: " + str(int(floor(Global.score*Global.measure_unit)))
-	if Global.measure_unit == 0.9144:
-		distance.text += " meters"
-	else:
-		distance.text += " yards"
+	update_distance_text(0)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("restart game"):
 		spacetolaunch.hide()
-	if Global.game_is_running and Global.player_is_swimming:
-		Global.score += delta
-		distance.text = "Distance Traveled: " + str(int(floor(Global.score*Global.measure_unit)))
-		if Global.measure_unit == 0.9144:
-			distance.text += " meters"
-		else:
-			distance.text += " yards"
+	update_distance_text(delta)
 	stamina.show()
 	distance.show()
 	texture_progress_bar.show()
@@ -32,3 +22,10 @@ func _process(delta: float) -> void:
 		distance.hide()
 		texture_progress_bar.hide()
 		
+func update_distance_text(delta):
+	Global.score += delta
+	distance.text = "Distance: " + str(int(floor(Global.score*Global.measure_unit)))
+	if Global.measure_unit == 0.9144:
+		distance.text += " meters"
+	else:
+		distance.text += " yards"
