@@ -14,9 +14,11 @@ func _on_body_entered(body: Node2D) -> void:
 		print("tweening")
 		AudioPlayer.play_sfx(AudioPlayer.SPLASH, -1)
 		EventBus.game_over.emit("whirlpool")
+		Global.camera_node.shake()
 	if is_shark:
 		EventBus.game_over.emit("shark")
 		AudioPlayer.play_sfx(AudioPlayer.CHOMP, -1)
+		Global.camera_node.shake()
 	print("dying shall commence now")
 
 

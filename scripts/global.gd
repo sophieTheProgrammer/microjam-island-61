@@ -11,7 +11,7 @@ const WORLD_CONTAINER = preload("res://scenes/world_container.tscn")
 # References
 var player_node : CharacterBody2D
 var fade_node : CanvasLayer
-
+var camera_node
 # Game State
 var high_score = 0
 var game_is_running: bool = false
