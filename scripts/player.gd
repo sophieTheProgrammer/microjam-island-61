@@ -14,7 +14,7 @@ var log_ref = null
 var direction = 0
 
 enum player_state {
-	IDLE,
+	BEACH,
 	SWIMMING,
 	ON_LOG,
 	DEAD
@@ -26,27 +26,34 @@ func _ready() -> void:
 	Global.player_node = self
 	EventBus.player_attaches_to_log.connect(attach_to_log)
 	EventBus.deattached_log.connect(detach_from_log)
-	
-	state = player_state.IDLE
-	velocity.x = 0
-	beach_sprite.show()
+	state = player_state.BEACH
 	
 	
 func _physics_process(delta: float) -> void:
 	if not Global.game_is_running:
 		# if dead
-		handle_death()
+		player_state.DEAD
+		#handle_death()
 	else:
-		if Global.attached and Global.game_is_running:
+		if Global.attached:
 			# if on log
-			handle_log()
+			state = player_state.ON_LOG
 		else:
 			# swimming
-			handle_swimming()
+			state = player_state.SWIMMING
 		self.rotation = lerp_angle(self.rotation, direction*45, 10 * delta)
-
-
+	match state:
+		player_state.BEACH:
+			handle_beach()
+		player_state.SWIMMING:
+			handle_swimming()
+		player_state.ON_LOG:
+			handle_log()
+		player_state.DEAD:
+			handle_death()
+	print(state)
 func attach_to_log(log_ref):
+	state = player_state.ON_LOG
 	print("attaching shall commence")
 	AudioPlayer.play_sfx(AudioPlayer.LOG, 1)
 	cpu_particles_2d.hide()
@@ -57,6 +64,7 @@ func attach_to_log(log_ref):
 	
 
 func detach_from_log():
+	state = player_state.SWIMMING
 	AudioPlayer.play_sfx(AudioPlayer.LOG, 6767)
 	EventBus.player_deattaches_to_log.emit()
 	cpu_particles_2d.show()
@@ -75,7 +83,6 @@ func handle_log():
 func handle_death():
 	cpu_particles_2d.hide()
 	animated_sprite_2d.stop()
-	beach_sprite.show()
 	animated_sprite_2d.frame = 0
 	animated_sprite_2d.hide()
 	Global.is_decreasing = false
@@ -96,3 +103,8 @@ func handle_swimming():
 		velocity.y = 0
 		position.y = -Global.viewport.y/2 + BUFFER
 	move_and_slide()
+
+func handle_beach():
+	velocity.x = 0
+	beach_sprite.show()
+	animated_sprite_2d.hide()
