@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dau314vrra7i6"]
 
 [ext_resource type="Script" uid="uid://bac43hr3wa42x" path="res://scripts/chunk.gd" id="1_h8q3v"]
-[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/waves.png" id="2_jtw3q"]
+[ext_resource type="Texture2D" uid="uid://7cp12rbdq2hy" path="res://art/WAVES.png" id="2_jtw3q"]
 [ext_resource type="Texture2D" uid="uid://crrwebums7cof" path="res://art/jam_gradint.png" id="3_c3gog"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p8wc"]
@@ -29,6 +29,7 @@ debug_color = Color(0.9411765, 0, 0, 0.41960785)
 position = Vector2(717, 24)
 
 [node name="Waves" type="Node2D" parent="." unique_id=1230517454]
+visible = false
 
 [node name="Waves" type="Sprite2D" parent="Waves" unique_id=884147486]
 modulate = Color(1, 1, 1, 0.70000005)

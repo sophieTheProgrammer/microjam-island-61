@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://dnntyd3u0w8yn" path="res://art/IMG_3342.png" id="2_iux3g"]
 [ext_resource type="Script" uid="uid://bjgom3kxta2p5" path="res://scripts/camera_2d.gd" id="2_mlpqv"]
 [ext_resource type="PackedScene" uid="uid://dh8ov6dq61m3o" path="res://scenes/player.tscn" id="3_rbrnk"]
+[ext_resource type="Texture2D" uid="uid://dvvliyr1oucmw" path="res://art/Parallax1.png" id="6_iux3g"]
+[ext_resource type="Texture2D" uid="uid://47g1jwq5dj62" path="res://art/Parallax 2.png" id="7_tewq5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h2h35"]
 animations = [{
@@ -40,3 +42,35 @@ position_smoothing_enabled = true
 script = ExtResource("2_mlpqv")
 
 [node name="player" parent="." unique_id=1710529082 instance=ExtResource("3_rbrnk")]
+
+[node name="Parallax" type="Node2D" parent="." unique_id=402137927]
+
+[node name="Parallax2D" type="Parallax2D" parent="Parallax" unique_id=529415897]
+z_index = -2
+scroll_scale = Vector2(0.2, 0.2)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(1618.05, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D" unique_id=670090957]
+modulate = Color(0.15686275, 0.54509807, 0.57254905, 0.5294118)
+position = Vector2(398.1, 0)
+scale = Vector2(0.588, 0.3)
+texture = ExtResource("6_iux3g")
+offset = Vector2(1000, 0)
+
+[node name="Parallax2D2" type="Parallax2D" parent="Parallax" unique_id=294730844]
+modulate = Color(1, 1, 1, 0.75686276)
+z_index = -2
+scroll_scale = Vector2(0.7, 0.7)
+scroll_offset = Vector2(0, 100)
+repeat_size = Vector2(1618.05, 0)
+autoscroll = Vector2(-200, 0)
+repeat_times = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D2" unique_id=2038989398]
+modulate = Color(1, 1, 1, 0.20392157)
+position = Vector2(398.1, 0)
+scale = Vector2(0.588, 0.3)
+texture = ExtResource("7_tewq5")
+offset = Vector2(1000, 0)
